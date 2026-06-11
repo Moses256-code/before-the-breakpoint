@@ -2,7 +2,7 @@
 
 **A pre-resistance early-warning framework from longitudinal MIC distributions in 845,000 bacterial isolates.**
 
-Vivli AMR Data Challenge 2026 · [Author], [Institution]
+Vivli AMR Data Challenge 2026 · Nimusiima Praise, Mugerwa Moses, Southern Medical University
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
@@ -23,7 +23,7 @@ Trained on Pfizer ATLAS predictor years 2007–2014 and validated out-of-time on
 
 Mean leave-one-pair-out AUC: 0.821 → the signature is pair-generic.
 
-The **dashboard** (`reports/dashboard_v2.html`) lets you explore every country × pathogen-drug pair × year cell interactively.
+The **dashboard** (`index.html`) lets you explore every country × pathogen-drug pair × year cell interactively.
 
 ---
 
@@ -34,7 +34,7 @@ The **dashboard** (`reports/dashboard_v2.html`) lets you explore every country �
 ├── README.md                   ← you are here
 ├── LICENSE                     ← MIT
 ├── requirements.txt            ← Python deps for reproducing every analysis
-├── PROGRESS.md                 ← multi-session work log
+
 │
 ├── scripts/                    ← all analysis code, numbered to indicate execution order
 │   ├── mic_parser.py           ← interval-censored MIC parser (validated)
@@ -125,18 +125,7 @@ The **dashboard** (`reports/dashboard_v2.html`) lets you explore every country �
 │   ├── phase4_sensitivity.png
 │   ├── phase4_mechanism_stratified.png
 │   └── phase4_pediatric.png
-│
-└── reports/                    ← human-facing deliverables
-    ├── Phase1_summary.md
-    ├── Phase2_summary.md
-    ├── Phase3_summary.md
-    ├── Vivli_Report.docx        ← the headline Vivli submission
-    ├── Vivli_Report.pdf         ← PDF rendering of the above
-    ├── Vivli_Report_FullDraft.md← markdown source
-    ├── OSF_preregistration.md   ← pre-registration template
-    ├── Manuscript_outline.md
-    ├── dashboard.html           ← dashboard v1 (simple)
-    └── dashboard_v2.html        ← dashboard v2 (Palantir-style, recommended)
+
 ```
 
 ---
@@ -144,7 +133,7 @@ The **dashboard** (`reports/dashboard_v2.html`) lets you explore every country �
 ## Reproducing the analysis
 
 ### 1. Get the data
-The Pfizer ATLAS surveillance database is accessible via the [Vivli AMR Register](https://amr.vivli.org). Request access and download the non-USA partition as CSV. Place at `/home/claude/atlas_vivli_2004_2024_nonUSA.csv` (or update the path constants in the scripts).
+The Pfizer ATLAS surveillance database is accessible via the (https://amr.vivli.org).
 
 ### 2. Set up the environment
 Tested with Python 3.12, Ubuntu 24.04.
@@ -190,7 +179,7 @@ Total runtime: ~15–20 minutes on a modern laptop.
 ### 4. Open the dashboard
 ```bash
 # Just open in any browser:
-open reports/dashboard_v2.html
+open index.html
 ```
 
 ---
@@ -214,9 +203,8 @@ For the worked example *K. pneumoniae* × Ceftazidime-avibactam: pre-2018 PRAS c
 
 If you use this code or data products, please cite:
 
-> [Author], [Year]. *Before the Breakpoint: a pre-resistance early-warning framework from longitudinal MIC distributions in 845,000 bacterial isolates.* Vivli AMR Data Challenge 2026. https://github.com/[user]/before-the-breakpoint
+> Nimusiima Praise, Mugerwa Moses, 2026. *Before the Breakpoint: a pre-resistance early-warning framework from longitudinal MIC distributions in 845,000 bacterial isolates.* Vivli AMR Data Challenge 2026. https://github.com/Moses256-code/before-the-breakpoint
 
-OSF pre-registration: [DOI to be added].
 
 ## License
 
