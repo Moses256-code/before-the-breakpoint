@@ -121,12 +121,3 @@ The genotype overlay confirms the MIC signal: KPC, NDM, and OXA-48-type detectio
 | `figures/phase2_figF_genotype_kp.png` | MIC drift × β-lactamase gene carriage alignment — mechanism confirmation |
 
 ---
-
-## Ready for Phase 3
-
-Phase 3 will:
-1. Build the **Pre-Resistance Alert Score** as a per (country, pair, year) composite metric.
-2. Validate it retrospectively: train on 2007–2014, test on 2015–2024 — does the alert score, computed using only early data, predict which (country, pair) combinations would subsequently cross the breakpoint?
-3. Anchor in the K. pneumoniae × CAZ-AVI worked example: the alert score should fire in pre-2018 cells that became post-2018 hotspots (India, Greece, Argentina, Turkey).
-4. Produce the deployable artifact (interactive dashboard).
-5. Write up the Vivli manuscript outline.
