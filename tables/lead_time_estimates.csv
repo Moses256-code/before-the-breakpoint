@@ -1,0 +1,525 @@
+Species,Drug,Country,y_ecoff,y_bp,lead_yrs
+Acinetobacter baumannii,Meropenem,Argentina,2007,2007,0
+Acinetobacter baumannii,Meropenem,Australia,2008,2008,0
+Acinetobacter baumannii,Meropenem,Austria,2008,2008,0
+Acinetobacter baumannii,Meropenem,Belgium,2007,2007,0
+Acinetobacter baumannii,Meropenem,Brazil,2007,2007,0
+Acinetobacter baumannii,Meropenem,Bulgaria,2009,2009,0
+Acinetobacter baumannii,Meropenem,Canada,2010,2010,0
+Acinetobacter baumannii,Meropenem,Chile,2007,2007,0
+Acinetobacter baumannii,Meropenem,China,2008,2008,0
+Acinetobacter baumannii,Meropenem,Colombia,2007,2007,0
+Acinetobacter baumannii,Meropenem,Croatia,2007,2007,0
+Acinetobacter baumannii,Meropenem,Czech Republic,2007,2008,1
+Acinetobacter baumannii,Meropenem,Dominican Republic,2019,2019,0
+Acinetobacter baumannii,Meropenem,France,2007,2007,0
+Acinetobacter baumannii,Meropenem,Germany,2007,2009,2
+Acinetobacter baumannii,Meropenem,Greece,2007,2007,0
+Acinetobacter baumannii,Meropenem,Guatemala,2007,2007,0
+Acinetobacter baumannii,Meropenem,Hong Kong,2007,2010,3
+Acinetobacter baumannii,Meropenem,Hungary,2008,2008,0
+Acinetobacter baumannii,Meropenem,India,2007,2007,0
+Acinetobacter baumannii,Meropenem,Ireland,2007,2007,0
+Acinetobacter baumannii,Meropenem,Israel,2007,2007,0
+Acinetobacter baumannii,Meropenem,Italy,2007,2007,0
+Acinetobacter baumannii,Meropenem,Japan,2018,2018,0
+Acinetobacter baumannii,Meropenem,Jordan,2010,2010,0
+Acinetobacter baumannii,Meropenem,"Korea, South",2007,2007,0
+Acinetobacter baumannii,Meropenem,Kuwait,2012,2012,0
+Acinetobacter baumannii,Meropenem,Latvia,2008,2008,0
+Acinetobacter baumannii,Meropenem,Lithuania,2008,2008,0
+Acinetobacter baumannii,Meropenem,Malaysia,2009,2009,0
+Acinetobacter baumannii,Meropenem,Mexico,2007,2007,0
+Acinetobacter baumannii,Meropenem,Morocco,2011,2011,0
+Acinetobacter baumannii,Meropenem,Nigeria,2018,2018,0
+Acinetobacter baumannii,Meropenem,Panama,2007,2007,0
+Acinetobacter baumannii,Meropenem,Philippines,2007,2007,0
+Acinetobacter baumannii,Meropenem,Poland,2008,2008,0
+Acinetobacter baumannii,Meropenem,Portugal,2008,2008,0
+Acinetobacter baumannii,Meropenem,Romania,2008,2008,0
+Acinetobacter baumannii,Meropenem,Russia,2012,2012,0
+Acinetobacter baumannii,Meropenem,Saudi Arabia,2009,2009,0
+Acinetobacter baumannii,Meropenem,Singapore,2007,2007,0
+Acinetobacter baumannii,Meropenem,South Africa,2007,2007,0
+Acinetobacter baumannii,Meropenem,Spain,2007,2007,0
+Acinetobacter baumannii,Meropenem,Sweden,2011,2011,0
+Acinetobacter baumannii,Meropenem,Switzerland,2008,2012,4
+Acinetobacter baumannii,Meropenem,Taiwan,2007,2007,0
+Acinetobacter baumannii,Meropenem,Thailand,2008,2008,0
+Acinetobacter baumannii,Meropenem,Turkey,2008,2008,0
+Acinetobacter baumannii,Meropenem,Ukraine,2018,2018,0
+Acinetobacter baumannii,Meropenem,United Kingdom,2009,2009,0
+Acinetobacter baumannii,Meropenem,Venezuela,2007,2007,0
+Enterobacter cloacae,Meropenem,Argentina,2007,2017,10
+Enterobacter cloacae,Meropenem,Brazil,2008,2014,6
+Enterobacter cloacae,Meropenem,Chile,2007,2021,14
+Enterobacter cloacae,Meropenem,China,2008,2012,4
+Enterobacter cloacae,Meropenem,Colombia,2008,2008,0
+Enterobacter cloacae,Meropenem,Croatia,2007,2008,1
+Enterobacter cloacae,Meropenem,Finland,2008,2008,0
+Enterobacter cloacae,Meropenem,Greece,2007,2008,1
+Enterobacter cloacae,Meropenem,Guatemala,2007,2007,0
+Enterobacter cloacae,Meropenem,India,2007,2007,0
+Enterobacter cloacae,Meropenem,Italy,2007,2019,12
+Enterobacter cloacae,Meropenem,Kuwait,2012,2013,1
+Enterobacter cloacae,Meropenem,Nigeria,2014,2018,4
+Enterobacter cloacae,Meropenem,Panama,2013,2020,7
+Enterobacter cloacae,Meropenem,Philippines,2007,2013,6
+Enterobacter cloacae,Meropenem,Poland,2009,2018,9
+Enterobacter cloacae,Meropenem,Romania,2009,2012,3
+Enterobacter cloacae,Meropenem,Taiwan,2007,2021,14
+Enterobacter cloacae,Meropenem,Thailand,2008,2010,2
+Enterobacter cloacae,Meropenem,Turkey,2008,2009,1
+Enterobacter cloacae,Meropenem,Venezuela,2007,2008,1
+Escherichia coli,Cefepime,Argentina,2018,2019,1
+Escherichia coli,Cefepime,Australia,2018,2019,1
+Escherichia coli,Cefepime,Brazil,2018,2018,0
+Escherichia coli,Cefepime,Cameroon,2020,2020,0
+Escherichia coli,Cefepime,Canada,2018,2018,0
+Escherichia coli,Cefepime,Chile,2018,2018,0
+Escherichia coli,Cefepime,China,2018,2018,0
+Escherichia coli,Cefepime,Colombia,2018,2018,0
+Escherichia coli,Cefepime,Costa Rica,2018,2019,1
+Escherichia coli,Cefepime,Croatia,2018,2018,0
+Escherichia coli,Cefepime,Czech Republic,2018,2018,0
+Escherichia coli,Cefepime,Denmark,2018,2018,0
+Escherichia coli,Cefepime,Dominican Republic,2018,2018,0
+Escherichia coli,Cefepime,Finland,2018,2018,0
+Escherichia coli,Cefepime,Germany,2018,2018,0
+Escherichia coli,Cefepime,Greece,2018,2019,1
+Escherichia coli,Cefepime,Guatemala,2018,2018,0
+Escherichia coli,Cefepime,Hungary,2018,2019,1
+Escherichia coli,Cefepime,India,2018,2018,0
+Escherichia coli,Cefepime,Israel,2018,2018,0
+Escherichia coli,Cefepime,Italy,2018,2018,0
+Escherichia coli,Cefepime,Ivory Coast,2020,2020,0
+Escherichia coli,Cefepime,Japan,2018,2019,1
+Escherichia coli,Cefepime,Jordan,2018,2018,0
+Escherichia coli,Cefepime,"Korea, South",2018,2018,0
+Escherichia coli,Cefepime,Kuwait,2018,2018,0
+Escherichia coli,Cefepime,Latvia,2018,2018,0
+Escherichia coli,Cefepime,Lithuania,2018,2019,1
+Escherichia coli,Cefepime,Malaysia,2018,2018,0
+Escherichia coli,Cefepime,Mexico,2018,2018,0
+Escherichia coli,Cefepime,Morocco,2018,2018,0
+Escherichia coli,Cefepime,Nigeria,2018,2018,0
+Escherichia coli,Cefepime,Panama,2018,2018,0
+Escherichia coli,Cefepime,Philippines,2018,2018,0
+Escherichia coli,Cefepime,Poland,2018,2018,0
+Escherichia coli,Cefepime,Portugal,2018,2018,0
+Escherichia coli,Cefepime,Qatar,2019,2019,0
+Escherichia coli,Cefepime,Romania,2018,2018,0
+Escherichia coli,Cefepime,South Africa,2018,2018,0
+Escherichia coli,Cefepime,Sweden,2018,2018,0
+Escherichia coli,Cefepime,Switzerland,2018,2018,0
+Escherichia coli,Cefepime,Taiwan,2018,2018,0
+Escherichia coli,Cefepime,Thailand,2018,2018,0
+Escherichia coli,Cefepime,Turkey,2018,2018,0
+Escherichia coli,Cefepime,Ukraine,2018,2018,0
+Escherichia coli,Cefepime,United Kingdom,2018,2023,5
+Escherichia coli,Cefepime,Venezuela,2018,2018,0
+Escherichia coli,Ceftazidime avibactam,India,2018,2018,0
+Escherichia coli,Ceftazidime avibactam,Qatar,2019,2023,4
+Escherichia coli,Ceftazidime avibactam,Ukraine,2020,2024,4
+Escherichia coli,Ceftriaxone,Argentina,2004,2005,1
+Escherichia coli,Ceftriaxone,Australia,2004,2006,2
+Escherichia coli,Ceftriaxone,Austria,2004,2004,0
+Escherichia coli,Ceftriaxone,Belgium,2004,2005,1
+Escherichia coli,Ceftriaxone,Brazil,2004,2004,0
+Escherichia coli,Ceftriaxone,Canada,2004,2004,0
+Escherichia coli,Ceftriaxone,Chile,2005,2005,0
+Escherichia coli,Ceftriaxone,China,2004,2004,0
+Escherichia coli,Ceftriaxone,Colombia,2005,2005,0
+Escherichia coli,Ceftriaxone,Croatia,2006,2008,2
+Escherichia coli,Ceftriaxone,Czech Republic,2006,2006,0
+Escherichia coli,Ceftriaxone,Denmark,2007,2008,1
+Escherichia coli,Ceftriaxone,Finland,2006,2007,1
+Escherichia coli,Ceftriaxone,France,2005,2008,3
+Escherichia coli,Ceftriaxone,Germany,2004,2006,2
+Escherichia coli,Ceftriaxone,Greece,2004,2004,0
+Escherichia coli,Ceftriaxone,Guatemala,2006,2006,0
+Escherichia coli,Ceftriaxone,Hong Kong,2006,2006,0
+Escherichia coli,Ceftriaxone,Hungary,2007,2007,0
+Escherichia coli,Ceftriaxone,India,2004,2004,0
+Escherichia coli,Ceftriaxone,Ireland,2005,2006,1
+Escherichia coli,Ceftriaxone,Israel,2006,2006,0
+Escherichia coli,Ceftriaxone,Italy,2004,2004,0
+Escherichia coli,Ceftriaxone,Jordan,2010,2010,0
+Escherichia coli,Ceftriaxone,"Korea, South",2005,2005,0
+Escherichia coli,Ceftriaxone,Kuwait,2012,2012,0
+Escherichia coli,Ceftriaxone,Latvia,2005,2005,0
+Escherichia coli,Ceftriaxone,Lithuania,2006,2016,10
+Escherichia coli,Ceftriaxone,Mexico,2005,2005,0
+Escherichia coli,Ceftriaxone,Morocco,2011,2011,0
+Escherichia coli,Ceftriaxone,Netherlands,2006,2010,4
+Escherichia coli,Ceftriaxone,Pakistan,2005,2005,0
+Escherichia coli,Ceftriaxone,Panama,2006,2006,0
+Escherichia coli,Ceftriaxone,Philippines,2004,2007,3
+Escherichia coli,Ceftriaxone,Poland,2004,2008,4
+Escherichia coli,Ceftriaxone,Portugal,2004,2004,0
+Escherichia coli,Ceftriaxone,Romania,2008,2008,0
+Escherichia coli,Ceftriaxone,Saudi Arabia,2009,2009,0
+Escherichia coli,Ceftriaxone,Singapore,2004,2004,0
+Escherichia coli,Ceftriaxone,Slovenia,2007,2007,0
+Escherichia coli,Ceftriaxone,South Africa,2005,2007,2
+Escherichia coli,Ceftriaxone,Spain,2004,2005,1
+Escherichia coli,Ceftriaxone,Sweden,2005,2005,0
+Escherichia coli,Ceftriaxone,Switzerland,2004,2009,5
+Escherichia coli,Ceftriaxone,Taiwan,2006,2006,0
+Escherichia coli,Ceftriaxone,Thailand,2008,2008,0
+Escherichia coli,Ceftriaxone,Turkey,2005,2005,0
+Escherichia coli,Ceftriaxone,United Kingdom,2004,2004,0
+Escherichia coli,Ceftriaxone,Venezuela,2006,2006,0
+Escherichia coli,Meropenem,Guatemala,2008,2008,0
+Escherichia coli,Meropenem,India,2007,2016,9
+Escherichia coli,Meropenem,Jordan,2011,2023,12
+Escherichia coli,Meropenem,Qatar,2019,2023,4
+Escherichia coli,Meropenem,Ukraine,2018,2024,6
+Klebsiella pneumoniae,Cefepime,Argentina,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Belgium,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Brazil,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Cameroon,2020,2020,0
+Klebsiella pneumoniae,Cefepime,Canada,2018,2021,3
+Klebsiella pneumoniae,Cefepime,Chile,2018,2018,0
+Klebsiella pneumoniae,Cefepime,China,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Colombia,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Costa Rica,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Croatia,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Czech Republic,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Dominican Republic,2018,2018,0
+Klebsiella pneumoniae,Cefepime,France,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Germany,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Greece,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Guatemala,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Hungary,2018,2018,0
+Klebsiella pneumoniae,Cefepime,India,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Ireland,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Israel,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Italy,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Ivory Coast,2020,2020,0
+Klebsiella pneumoniae,Cefepime,Japan,2018,2023,5
+Klebsiella pneumoniae,Cefepime,Jordan,2018,2018,0
+Klebsiella pneumoniae,Cefepime,"Korea, South",2018,2018,0
+Klebsiella pneumoniae,Cefepime,Kuwait,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Latvia,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Lithuania,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Malaysia,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Mexico,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Morocco,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Netherlands,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Nigeria,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Panama,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Philippines,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Poland,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Portugal,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Qatar,2019,2019,0
+Klebsiella pneumoniae,Cefepime,Romania,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Slovenia,2021,2021,0
+Klebsiella pneumoniae,Cefepime,South Africa,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Spain,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Sweden,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Switzerland,2018,2019,1
+Klebsiella pneumoniae,Cefepime,Taiwan,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Thailand,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Turkey,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Ukraine,2018,2018,0
+Klebsiella pneumoniae,Cefepime,United Kingdom,2018,2018,0
+Klebsiella pneumoniae,Cefepime,Venezuela,2018,2018,0
+Klebsiella pneumoniae,Ceftazidime avibactam,Argentina,2012,2020,8
+Klebsiella pneumoniae,Ceftazidime avibactam,Brazil,2012,2024,12
+Klebsiella pneumoniae,Ceftazidime avibactam,Cameroon,2021,2023,2
+Klebsiella pneumoniae,Ceftazidime avibactam,Colombia,2014,2023,9
+Klebsiella pneumoniae,Ceftazidime avibactam,Costa Rica,2018,2021,3
+Klebsiella pneumoniae,Ceftazidime avibactam,Greece,2012,2015,3
+Klebsiella pneumoniae,Ceftazidime avibactam,Guatemala,2018,2018,0
+Klebsiella pneumoniae,Ceftazidime avibactam,India,2018,2018,0
+Klebsiella pneumoniae,Ceftazidime avibactam,Italy,2012,2023,11
+Klebsiella pneumoniae,Ceftazidime avibactam,Jordan,2020,2021,1
+Klebsiella pneumoniae,Ceftazidime avibactam,Kuwait,2018,2021,3
+Klebsiella pneumoniae,Ceftazidime avibactam,Malaysia,2013,2024,11
+Klebsiella pneumoniae,Ceftazidime avibactam,Mexico,2019,2021,2
+Klebsiella pneumoniae,Ceftazidime avibactam,Morocco,2019,2019,0
+Klebsiella pneumoniae,Ceftazidime avibactam,Nigeria,2013,2018,5
+Klebsiella pneumoniae,Ceftazidime avibactam,Philippines,2012,2024,12
+Klebsiella pneumoniae,Ceftazidime avibactam,Poland,2013,2023,10
+Klebsiella pneumoniae,Ceftazidime avibactam,Qatar,2019,2019,0
+Klebsiella pneumoniae,Ceftazidime avibactam,Romania,2012,2015,3
+Klebsiella pneumoniae,Ceftazidime avibactam,Russia,2012,2018,6
+Klebsiella pneumoniae,Ceftazidime avibactam,South Africa,2018,2021,3
+Klebsiella pneumoniae,Ceftazidime avibactam,Thailand,2015,2018,3
+Klebsiella pneumoniae,Ceftazidime avibactam,Turkey,2015,2018,3
+Klebsiella pneumoniae,Ceftazidime avibactam,Ukraine,2018,2019,1
+Klebsiella pneumoniae,Ceftazidime avibactam,Venezuela,2018,2020,2
+Klebsiella pneumoniae,Ceftriaxone,Argentina,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Australia,2004,2007,3
+Klebsiella pneumoniae,Ceftriaxone,Austria,2004,2006,2
+Klebsiella pneumoniae,Ceftriaxone,Belgium,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Brazil,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Canada,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Chile,2005,2005,0
+Klebsiella pneumoniae,Ceftriaxone,China,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Colombia,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Croatia,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Czech Republic,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Denmark,2007,2007,0
+Klebsiella pneumoniae,Ceftriaxone,Finland,2007,2008,1
+Klebsiella pneumoniae,Ceftriaxone,France,2004,2005,1
+Klebsiella pneumoniae,Ceftriaxone,Germany,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Greece,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Guatemala,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Hong Kong,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Hungary,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,India,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Ireland,2004,2007,3
+Klebsiella pneumoniae,Ceftriaxone,Israel,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Italy,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Jordan,2010,2010,0
+Klebsiella pneumoniae,Ceftriaxone,"Korea, South",2005,2005,0
+Klebsiella pneumoniae,Ceftriaxone,Kuwait,2012,2012,0
+Klebsiella pneumoniae,Ceftriaxone,Latvia,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Lithuania,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Mexico,2005,2005,0
+Klebsiella pneumoniae,Ceftriaxone,Morocco,2011,2011,0
+Klebsiella pneumoniae,Ceftriaxone,Netherlands,2008,2008,0
+Klebsiella pneumoniae,Ceftriaxone,Pakistan,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Panama,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Philippines,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Poland,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Portugal,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Romania,2008,2008,0
+Klebsiella pneumoniae,Ceftriaxone,Saudi Arabia,2009,2009,0
+Klebsiella pneumoniae,Ceftriaxone,Singapore,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Slovak Republic,2007,2007,0
+Klebsiella pneumoniae,Ceftriaxone,Slovenia,2006,2007,1
+Klebsiella pneumoniae,Ceftriaxone,South Africa,2005,2005,0
+Klebsiella pneumoniae,Ceftriaxone,Spain,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Sweden,2007,2008,1
+Klebsiella pneumoniae,Ceftriaxone,Switzerland,2006,2009,3
+Klebsiella pneumoniae,Ceftriaxone,Taiwan,2006,2006,0
+Klebsiella pneumoniae,Ceftriaxone,Thailand,2008,2008,0
+Klebsiella pneumoniae,Ceftriaxone,Turkey,2005,2005,0
+Klebsiella pneumoniae,Ceftriaxone,United Kingdom,2004,2004,0
+Klebsiella pneumoniae,Ceftriaxone,Venezuela,2006,2006,0
+Klebsiella pneumoniae,Imipenem,Argentina,2012,2012,0
+Klebsiella pneumoniae,Imipenem,Austria,2015,2015,0
+Klebsiella pneumoniae,Imipenem,Brazil,2012,2012,0
+Klebsiella pneumoniae,Imipenem,Cameroon,2021,2023,2
+Klebsiella pneumoniae,Imipenem,Chile,2014,2021,7
+Klebsiella pneumoniae,Imipenem,China,2012,2015,3
+Klebsiella pneumoniae,Imipenem,Colombia,2012,2012,0
+Klebsiella pneumoniae,Imipenem,Costa Rica,2019,2021,2
+Klebsiella pneumoniae,Imipenem,Croatia,2018,2019,1
+Klebsiella pneumoniae,Imipenem,Greece,2012,2012,0
+Klebsiella pneumoniae,Imipenem,Guatemala,2018,2018,0
+Klebsiella pneumoniae,Imipenem,Hungary,2012,2019,7
+Klebsiella pneumoniae,Imipenem,India,2018,2018,0
+Klebsiella pneumoniae,Imipenem,Israel,2012,2012,0
+Klebsiella pneumoniae,Imipenem,Italy,2012,2012,0
+Klebsiella pneumoniae,Imipenem,Jordan,2018,2018,0
+Klebsiella pneumoniae,Imipenem,"Korea, South",2012,2023,11
+Klebsiella pneumoniae,Imipenem,Kuwait,2014,2020,6
+Klebsiella pneumoniae,Imipenem,Malaysia,2018,2020,2
+Klebsiella pneumoniae,Imipenem,Mexico,2017,2021,4
+Klebsiella pneumoniae,Imipenem,Morocco,2018,2019,1
+Klebsiella pneumoniae,Imipenem,New Zealand,2020,2021,1
+Klebsiella pneumoniae,Imipenem,Nigeria,2013,2018,5
+Klebsiella pneumoniae,Imipenem,Panama,2019,2021,2
+Klebsiella pneumoniae,Imipenem,Philippines,2012,2017,5
+Klebsiella pneumoniae,Imipenem,Poland,2016,2018,2
+Klebsiella pneumoniae,Imipenem,Portugal,2013,2013,0
+Klebsiella pneumoniae,Imipenem,Qatar,2019,2019,0
+Klebsiella pneumoniae,Imipenem,Romania,2012,2013,1
+Klebsiella pneumoniae,Imipenem,Russia,2012,2012,0
+Klebsiella pneumoniae,Imipenem,South Africa,2012,2019,7
+Klebsiella pneumoniae,Imipenem,Spain,2015,2020,5
+Klebsiella pneumoniae,Imipenem,Taiwan,2012,2024,12
+Klebsiella pneumoniae,Imipenem,Thailand,2012,2017,5
+Klebsiella pneumoniae,Imipenem,Turkey,2012,2014,2
+Klebsiella pneumoniae,Imipenem,Ukraine,2018,2018,0
+Klebsiella pneumoniae,Imipenem,Venezuela,2012,2018,6
+Klebsiella pneumoniae,Meropenem,Argentina,2007,2010,3
+Klebsiella pneumoniae,Meropenem,Austria,2015,2015,0
+Klebsiella pneumoniae,Meropenem,Brazil,2007,2012,5
+Klebsiella pneumoniae,Meropenem,Bulgaria,2009,2022,13
+Klebsiella pneumoniae,Meropenem,Cameroon,2023,2023,0
+Klebsiella pneumoniae,Meropenem,Chile,2007,2021,14
+Klebsiella pneumoniae,Meropenem,China,2008,2014,6
+Klebsiella pneumoniae,Meropenem,Colombia,2007,2008,1
+Klebsiella pneumoniae,Meropenem,Costa Rica,2018,2021,3
+Klebsiella pneumoniae,Meropenem,Croatia,2013,2013,0
+Klebsiella pneumoniae,Meropenem,Greece,2007,2007,0
+Klebsiella pneumoniae,Meropenem,Guatemala,2008,2008,0
+Klebsiella pneumoniae,Meropenem,Hungary,2019,2022,3
+Klebsiella pneumoniae,Meropenem,India,2007,2008,1
+Klebsiella pneumoniae,Meropenem,Israel,2007,2007,0
+Klebsiella pneumoniae,Meropenem,Italy,2007,2010,3
+Klebsiella pneumoniae,Meropenem,Jordan,2011,2015,4
+Klebsiella pneumoniae,Meropenem,"Korea, South",2017,2023,6
+Klebsiella pneumoniae,Meropenem,Kuwait,2012,2020,8
+Klebsiella pneumoniae,Meropenem,Malaysia,2019,2020,1
+Klebsiella pneumoniae,Meropenem,Mexico,2008,2021,13
+Klebsiella pneumoniae,Meropenem,Morocco,2012,2019,7
+Klebsiella pneumoniae,Meropenem,Nigeria,2018,2018,0
+Klebsiella pneumoniae,Meropenem,Panama,2007,2021,14
+Klebsiella pneumoniae,Meropenem,Philippines,2013,2015,2
+Klebsiella pneumoniae,Meropenem,Poland,2008,2009,1
+Klebsiella pneumoniae,Meropenem,Portugal,2009,2019,10
+Klebsiella pneumoniae,Meropenem,Qatar,2019,2019,0
+Klebsiella pneumoniae,Meropenem,Romania,2008,2009,1
+Klebsiella pneumoniae,Meropenem,Russia,2012,2012,0
+Klebsiella pneumoniae,Meropenem,Saudi Arabia,2009,2012,3
+Klebsiella pneumoniae,Meropenem,South Africa,2007,2007,0
+Klebsiella pneumoniae,Meropenem,Taiwan,2007,2024,17
+Klebsiella pneumoniae,Meropenem,Thailand,2017,2017,0
+Klebsiella pneumoniae,Meropenem,Turkey,2008,2009,1
+Klebsiella pneumoniae,Meropenem,Ukraine,2018,2018,0
+Klebsiella pneumoniae,Meropenem,United Kingdom,2007,2018,11
+Klebsiella pneumoniae,Meropenem,Venezuela,2009,2009,0
+Pseudomonas aeruginosa,Cefepime,Argentina,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Australia,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Austria,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Belgium,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Brazil,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Bulgaria,2009,2009,0
+Pseudomonas aeruginosa,Cefepime,Canada,2008,2009,1
+Pseudomonas aeruginosa,Cefepime,Chile,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,China,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Colombia,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Croatia,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Czech Republic,2008,2009,1
+Pseudomonas aeruginosa,Cefepime,Denmark,2009,2009,0
+Pseudomonas aeruginosa,Cefepime,France,2008,2009,1
+Pseudomonas aeruginosa,Cefepime,Greece,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Guatemala,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Hong Kong,2010,2010,0
+Pseudomonas aeruginosa,Cefepime,Hungary,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,India,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Ireland,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Israel,2008,2009,1
+Pseudomonas aeruginosa,Cefepime,Italy,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Japan,2012,2024,12
+Pseudomonas aeruginosa,Cefepime,Jordan,2010,2010,0
+Pseudomonas aeruginosa,Cefepime,"Korea, South",2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Kuwait,2012,2018,6
+Pseudomonas aeruginosa,Cefepime,Latvia,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Lithuania,2008,2010,2
+Pseudomonas aeruginosa,Cefepime,Malaysia,2009,2010,1
+Pseudomonas aeruginosa,Cefepime,Mexico,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Morocco,2011,2012,1
+Pseudomonas aeruginosa,Cefepime,Netherlands,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Nigeria,2014,2018,4
+Pseudomonas aeruginosa,Cefepime,Panama,2008,2010,2
+Pseudomonas aeruginosa,Cefepime,Philippines,2012,2018,6
+Pseudomonas aeruginosa,Cefepime,Poland,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Portugal,2008,2009,1
+Pseudomonas aeruginosa,Cefepime,Qatar,2019,2019,0
+Pseudomonas aeruginosa,Cefepime,Romania,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Russia,2012,2018,6
+Pseudomonas aeruginosa,Cefepime,Saudi Arabia,2009,2009,0
+Pseudomonas aeruginosa,Cefepime,Singapore,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Slovenia,2008,2009,1
+Pseudomonas aeruginosa,Cefepime,South Africa,2011,2011,0
+Pseudomonas aeruginosa,Cefepime,Spain,2008,2010,2
+Pseudomonas aeruginosa,Cefepime,Sweden,2008,2021,13
+Pseudomonas aeruginosa,Cefepime,Switzerland,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Taiwan,2009,2009,0
+Pseudomonas aeruginosa,Cefepime,Thailand,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Turkey,2008,2008,0
+Pseudomonas aeruginosa,Cefepime,Ukraine,2018,2018,0
+Pseudomonas aeruginosa,Cefepime,United Kingdom,2010,2010,0
+Pseudomonas aeruginosa,Cefepime,Venezuela,2008,2008,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Argentina,2012,2021,9
+Pseudomonas aeruginosa,Ceftazidime avibactam,Austria,2013,2015,2
+Pseudomonas aeruginosa,Ceftazidime avibactam,Belgium,2012,2013,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,Brazil,2012,2014,2
+Pseudomonas aeruginosa,Ceftazidime avibactam,Chile,2012,2012,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,China,2013,2016,3
+Pseudomonas aeruginosa,Ceftazidime avibactam,Colombia,2012,2014,2
+Pseudomonas aeruginosa,Ceftazidime avibactam,Croatia,2018,2019,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,Czech Republic,2013,2013,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Greece,2012,2012,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Guatemala,2018,2019,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,Hong Kong,2013,2018,5
+Pseudomonas aeruginosa,Ceftazidime avibactam,Hungary,2013,2014,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,India,2018,2018,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Italy,2012,2014,2
+Pseudomonas aeruginosa,Ceftazidime avibactam,Japan,2012,2016,4
+Pseudomonas aeruginosa,Ceftazidime avibactam,Jordan,2021,2022,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,"Korea, South",2013,2015,2
+Pseudomonas aeruginosa,Ceftazidime avibactam,Kuwait,2013,2013,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Latvia,2018,2018,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Malaysia,2013,2020,7
+Pseudomonas aeruginosa,Ceftazidime avibactam,Mexico,2012,2014,2
+Pseudomonas aeruginosa,Ceftazidime avibactam,Morocco,2018,2018,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Netherlands,2014,2024,10
+Pseudomonas aeruginosa,Ceftazidime avibactam,Nigeria,2014,2018,4
+Pseudomonas aeruginosa,Ceftazidime avibactam,Panama,2018,2018,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Philippines,2012,2012,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Poland,2013,2016,3
+Pseudomonas aeruginosa,Ceftazidime avibactam,Qatar,2019,2019,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Romania,2012,2013,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,Russia,2012,2013,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,South Africa,2012,2013,1
+Pseudomonas aeruginosa,Ceftazidime avibactam,Sweden,2014,2022,8
+Pseudomonas aeruginosa,Ceftazidime avibactam,Taiwan,2012,2023,11
+Pseudomonas aeruginosa,Ceftazidime avibactam,Thailand,2013,2013,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Turkey,2013,2019,6
+Pseudomonas aeruginosa,Ceftazidime avibactam,Ukraine,2018,2018,0
+Pseudomonas aeruginosa,Ceftazidime avibactam,Venezuela,2012,2012,0
+Pseudomonas aeruginosa,Meropenem,Argentina,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Australia,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Austria,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Belgium,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Brazil,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Bulgaria,2009,2009,0
+Pseudomonas aeruginosa,Meropenem,Canada,2007,2009,2
+Pseudomonas aeruginosa,Meropenem,Chile,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,China,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Colombia,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Costa Rica,2018,2018,0
+Pseudomonas aeruginosa,Meropenem,Croatia,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Czech Republic,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Denmark,2007,2009,2
+Pseudomonas aeruginosa,Meropenem,Dominican Republic,2018,2018,0
+Pseudomonas aeruginosa,Meropenem,Finland,2011,2013,2
+Pseudomonas aeruginosa,Meropenem,France,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Germany,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Greece,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Guatemala,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Hong Kong,2007,2010,3
+Pseudomonas aeruginosa,Meropenem,Hungary,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,India,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Ireland,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Israel,2007,2008,1
+Pseudomonas aeruginosa,Meropenem,Italy,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Japan,2012,2012,0
+Pseudomonas aeruginosa,Meropenem,Jordan,2010,2010,0
+Pseudomonas aeruginosa,Meropenem,"Korea, South",2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Kuwait,2012,2012,0
+Pseudomonas aeruginosa,Meropenem,Latvia,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Lithuania,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Malaysia,2009,2009,0
+Pseudomonas aeruginosa,Meropenem,Mexico,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Morocco,2011,2011,0
+Pseudomonas aeruginosa,Meropenem,Netherlands,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Nigeria,2014,2014,0
+Pseudomonas aeruginosa,Meropenem,Panama,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Philippines,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Poland,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Portugal,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Qatar,2019,2019,0
+Pseudomonas aeruginosa,Meropenem,Romania,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Russia,2012,2012,0
+Pseudomonas aeruginosa,Meropenem,Saudi Arabia,2009,2009,0
+Pseudomonas aeruginosa,Meropenem,Singapore,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Slovenia,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,South Africa,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Spain,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Sweden,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Switzerland,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Taiwan,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Thailand,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Turkey,2008,2008,0
+Pseudomonas aeruginosa,Meropenem,Ukraine,2018,2018,0
+Pseudomonas aeruginosa,Meropenem,United Kingdom,2007,2007,0
+Pseudomonas aeruginosa,Meropenem,Venezuela,2007,2007,0

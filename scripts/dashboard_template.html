@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Before the Breakpoint — Pre-Resistance Alert Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   THEME TOKENS
+   ========================================================= */
+:root[data-theme="dark"] {
+  --bg-0:    #0b1015;
+  --bg-1:    #131a23;
+  --bg-2:    #1a2330;
+  --bg-3:    #232d3d;
+  --border:  #2a3647;
+  --border-hi:#3a4a63;
+  --text-0:  #e6ecf3;
+  --text-1:  #aab6c7;
+  --text-2:  #7986a0;
+  --accent:  #4cc9c1;
+  --accent-2:#7aa9ff;
+  --warn:    #f4a747;
+  --danger:  #e6677a;
+  --success: #65d39a;
+  --severity-low:   #65d39a;
+  --severity-med:   #f4a747;
+  --severity-high:  #e6677a;
+  --shadow:  0 2px 12px rgba(0,0,0,0.35);
+}
+:root[data-theme="light"] {
+  --bg-0:    #f5f7fa;
+  --bg-1:    #ffffff;
+  --bg-2:    #f0f3f7;
+  --bg-3:    #e6ebf1;
+  --border:  #d6dde6;
+  --border-hi:#b9c4d2;
+  --text-0:  #15202b;
+  --text-1:  #4a5568;
+  --text-2:  #7a8794;
+  --accent:  #14908a;
+  --accent-2:#3868d8;
+  --warn:    #d4830f;
+  --danger:  #c8344a;
+  --success: #2e8c5c;
+  --severity-low:   #2e8c5c;
+  --severity-med:   #d4830f;
+  --severity-high:  #c8344a;
+  --shadow:  0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg-0);
+  color: var(--text-0);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code, .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* =========================================================
+   APP SHELL
+   ========================================================= */
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+.topbar {
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex; align-items: center; gap: 12px;
+}
+.brand-mark {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.brand-mark::after {
+  content: ''; position: absolute; inset: 6px;
+  background: var(--bg-1); border-radius: 3px;
+}
+.brand-title { font-size: 16px; font-weight: 600; letter-spacing: 0.2px; }
+.brand-subtitle { font-size: 12px; color: var(--text-2); margin-top: 1px; }
+.topbar-actions { display: flex; align-items: center; gap: 14px; font-size: 12px; color: var(--text-1); }
+.theme-toggle {
+  background: var(--bg-2); border: 1px solid var(--border); color: var(--text-0);
+  width: 32px; height: 32px; border-radius: 6px; cursor: pointer; display: flex;
+  align-items: center; justify-content: center; font-size: 14px;
+}
+.theme-toggle:hover { background: var(--bg-3); }
+
+/* =========================================================
+   TABS
+   ========================================================= */
+.tabs {
+  display: flex; gap: 2px; padding: 0 28px; background: var(--bg-1);
+  border-bottom: 1px solid var(--border);
+}
+.tab {
+  padding: 11px 18px; font-size: 13px; font-weight: 500; color: var(--text-1);
+  cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s;
+}
+.tab:hover { color: var(--text-0); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+.main { padding: 22px 28px 60px; max-width: 1600px; margin: 0 auto; width: 100%; }
+.tab-panel { display: none; animation: fadeIn .22s; }
+.tab-panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+.card {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.card-header {
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card-title { font-size: 13px; font-weight: 600; color: var(--text-0); letter-spacing: 0.3px; text-transform: uppercase; }
+.card-subtitle { font-size: 11px; color: var(--text-2); }
+.card-body { padding: 16px; }
+
+/* =========================================================
+   STAT TILES (KPI BAR)
+   ========================================================= */
+.stat-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 18px; }
+.stat {
+  background: var(--bg-1); border: 1px solid var(--border); border-radius: 8px;
+  padding: 14px 16px;
+}
+.stat-label { font-size: 11px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+.stat-value { font-size: 22px; font-weight: 600; margin-top: 6px; color: var(--text-0); }
+.stat-trend { font-size: 11px; color: var(--text-2); margin-top: 4px; }
+.stat-accent .stat-value { color: var(--accent); }
+
+/* =========================================================
+   GRID LAYOUTS
+   ========================================================= */
+.row { display: grid; gap: 14px; margin-bottom: 14px; }
+.row-2 { grid-template-columns: 1fr 1fr; }
+.row-3 { grid-template-columns: 1fr 1fr 1fr; }
+.row-2-1 { grid-template-columns: 2fr 1fr; }
+.row-1-2 { grid-template-columns: 1fr 2fr; }
+
+/* =========================================================
+   CHIPS / BADGES
+   ========================================================= */
+.chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 10px; font-size: 11px;
+  font-weight: 500; line-height: 1.6;
+}
+.chip-high   { background: rgba(230,103,122,0.16); color: var(--severity-high); }
+.chip-med    { background: rgba(244,167,71,0.16); color: var(--severity-med); }
+.chip-low    { background: rgba(101,211,154,0.16); color: var(--severity-low); }
+.chip-info   { background: rgba(122,169,255,0.16); color: var(--accent-2); }
+.chip-muted  { background: var(--bg-2); color: var(--text-2); }
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+.table-wrap { overflow-x: auto; }
+table.data {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+table.data th {
+  text-align: left; font-weight: 500; color: var(--text-2);
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 8px 12px; border-bottom: 1px solid var(--border); background: var(--bg-1);
+  position: sticky; top: 0; z-index: 1;
+}
+table.data td {
+  padding: 9px 12px; border-bottom: 1px solid var(--border);
+  color: var(--text-0);
+}
+table.data tr:hover td { background: var(--bg-2); }
+.num { text-align: right; font-variant-numeric: tabular-nums; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; }
+.text-muted { color: var(--text-2); }
+
+/* PRAS color bar inside table cells */
+.pras-cell { display: inline-flex; align-items: center; gap: 8px; }
+.pras-bar {
+  width: 60px; height: 6px; background: var(--bg-3); border-radius: 3px; overflow: hidden;
+}
+.pras-bar-fill { height: 100%; border-radius: 3px; }
+
+/* =========================================================
+   FORM CONTROLS
+   ========================================================= */
+.control-group { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+label.field { display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: var(--text-2); text-transform: uppercase; font-weight: 500; letter-spacing: 0.3px; }
+.select, input[type="text"] {
+  background: var(--bg-2); border: 1px solid var(--border);
+  color: var(--text-0); padding: 7px 10px; border-radius: 5px;
+  font-size: 13px; font-family: inherit;
+  min-width: 220px;
+}
+.select:focus, input[type="text"]:focus { outline: none; border-color: var(--accent); }
+
+/* =========================================================
+   SPARKLINE
+   ========================================================= */
+svg.spark { display: inline-block; vertical-align: middle; }
+.spark-cell { display: inline-flex; align-items: center; gap: 8px; }
+
+/* =========================================================
+   PLOTLY CONTAINER
+   ========================================================= */
+.plotly-host { width: 100%; min-height: 320px; }
+
+/* =========================================================
+   PILL FILTERS (in pair explorer)
+   ========================================================= */
+.pill-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill {
+  padding: 4px 11px; font-size: 12px; border-radius: 14px;
+  border: 1px solid var(--border); background: var(--bg-1);
+  color: var(--text-1); cursor: pointer; transition: all 0.15s;
+  white-space: nowrap;
+}
+.pill:hover { color: var(--text-0); border-color: var(--border-hi); }
+.pill.active { background: var(--accent); color: var(--bg-0); border-color: var(--accent); font-weight: 500; }
+
+/* =========================================================
+   FOOTNOTES
+   ========================================================= */
+.footnote { font-size: 11px; color: var(--text-2); margin-top: 6px; line-height: 1.5; }
+.section-title { font-size: 16px; font-weight: 600; margin: 8px 0 12px; }
+.helper { color: var(--text-2); font-size: 12px; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1100px) {
+  .stat-row { grid-template-columns: repeat(3, 1fr); }
+  .row-2, .row-2-1, .row-1-2 { grid-template-columns: 1fr; }
+  .row-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+  .row-3 { grid-template-columns: 1fr; }
+  .main { padding: 12px; }
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-0); }
+::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-hi); }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ====================== TOP BAR ====================== -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-title">Before the Breakpoint</div>
+        <div class="brand-subtitle">Pre-Resistance Alert Dashboard · Vivli AMR 2026</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <span class="helper mono" id="dataInfo">Loading…</span>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <!-- ====================== TABS ====================== -->
+  <nav class="tabs">
+    <div class="tab active" data-tab="overview">Overview</div>
+    <div class="tab" data-tab="map">World Map</div>
+    <div class="tab" data-tab="pair">Pair Explorer</div>
+    <div class="tab" data-tab="country">Country Profile</div>
+    <div class="tab" data-tab="model">Model & Validation</div>
+    <div class="tab" data-tab="about">About</div>
+  </nav>
+
+  <!-- ====================== MAIN ====================== -->
+  <main class="main">
+
+    <!-- =================== OVERVIEW =================== -->
+    <section class="tab-panel active" id="tab-overview">
+      <div class="stat-row" id="kpiRow"></div>
+
+      <div class="row row-2-1">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Top active alerts</div>
+              <div class="card-subtitle">Latest-year country-pair cells, ranked by PRAS · sparkline shows last 8 years of % above breakpoint</div>
+            </div>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <div class="table-wrap" style="max-height:520px;overflow-y:auto;">
+              <table class="data" id="alertsTable">
+                <thead>
+                  <tr>
+                    <th>Country</th><th>Pathogen × Drug</th><th>Year</th>
+                    <th class="num">n</th><th class="num">% above ECOFF</th>
+                    <th class="num">% above BP</th>
+                    <th>Recent trend</th>
+                    <th class="num">PRAS</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Risk-bucket realization</div>
+              <div class="card-subtitle">Test set: % of cells that subsequently crossed 10% BP within 5y</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="bucketChart" class="plotly-host" style="min-height:280px;"></div>
+            <div class="footnote">
+              The score genuinely stratifies risk. Cells with PRAS &gt; 0.75 had a
+              <strong>97%</strong> chance of subsequent breakpoint crossing; cells with PRAS &lt; 0.10, only <strong>8%</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-2">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Global yearly trend — % above breakpoint</div>
+              <div class="card-subtitle">Each line: aggregate across all reporting countries for one pair</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="globalTrendBP" class="plotly-host" style="min-height:340px;"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">All 17 modeled pairs</div>
+              <div class="card-subtitle">Coverage & latest-year status · sparklines show % above breakpoint over time</div>
+            </div>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <div class="table-wrap" style="max-height:340px;overflow-y:auto;">
+              <table class="data" id="pairsTable">
+                <thead>
+                  <tr>
+                    <th>Pair</th><th class="num">N</th><th>Window</th>
+                    <th class="num">Latest BP%</th><th>Trajectory</th>
+                    <th class="num">PRAS</th><th>Class</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MAP =================== -->
+    <section class="tab-panel" id="tab-map">
+      <div class="card">
+        <div class="card-header">
+          <div class="control-group">
+            <label class="field">Pathogen × Drug
+              <select class="select" id="mapPair"></select>
+            </label>
+            <label class="field">Metric
+              <select class="select" id="mapMetric">
+                <option value="PRAS">PRAS (alert score)</option>
+                <option value="pct_above_bp">% above breakpoint</option>
+                <option value="pct_above_ecoff">% above ECOFF</option>
+              </select>
+            </label>
+            <label class="field">Year
+              <select class="select" id="mapYear"></select>
+            </label>
+          </div>
+        </div>
+        <div class="card-body">
+          <div id="mapPlot" class="plotly-host" style="min-height:560px;"></div>
+          <div class="footnote">
+            Choropleth uses the latest scored year by default. Countries shown in grey have no isolates tested for this pair-year (or below the 10-isolate minimum). Hover any country for details.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== PAIR EXPLORER =================== -->
+    <section class="tab-panel" id="tab-pair">
+      <div class="card" style="margin-bottom:14px;">
+        <div class="card-header">
+          <div class="control-group">
+            <label class="field">Pathogen × Drug
+              <select class="select" id="pairExpSelect"></select>
+            </label>
+            <label class="field">Show
+              <div class="pill-group" id="pairExpFilter">
+                <div class="pill active" data-filter="all">All countries</div>
+                <div class="pill" data-filter="high">PRAS &gt; 0.5</div>
+                <div class="pill" data-filter="rising">Rising trend</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row row-2">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Country trajectories — % above breakpoint</div>
+          </div>
+          <div class="card-body">
+            <div id="pairCountryBP" class="plotly-host" style="min-height:420px;"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Country trajectories — PRAS</div>
+          </div>
+          <div class="card-body">
+            <div id="pairCountryPRAS" class="plotly-host" style="min-height:420px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Country-year heatmap (% above breakpoint)</div>
+        </div>
+        <div class="card-body">
+          <div id="pairHeatmap" class="plotly-host" style="min-height:500px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== COUNTRY PROFILE =================== -->
+    <section class="tab-panel" id="tab-country">
+      <div class="card" style="margin-bottom:14px;">
+        <div class="card-header">
+          <div class="control-group">
+            <label class="field">Country
+              <select class="select" id="countrySelect"></select>
+            </label>
+            <label class="field">Comparison country (optional)
+              <select class="select" id="countryCompare">
+                <option value="">— none —</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row row-3" id="countryKpis"></div>
+      <div class="card" style="margin-top:14px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Pair-by-pair trajectories</div>
+            <div class="card-subtitle" id="countryCompLabel"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div id="countrySmallMultiples" class="plotly-host" style="min-height:700px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MODEL =================== -->
+    <section class="tab-panel" id="tab-model">
+      <div class="row row-3">
+        <div class="stat stat-accent">
+          <div class="stat-label">Test AUC (out-of-time)</div>
+          <div class="stat-value mono" id="modelAUC">—</div>
+          <div class="stat-trend">Trained 2007–2014, tested 2015–2019</div>
+        </div>
+        <div class="stat stat-accent">
+          <div class="stat-label">Test AUPRC</div>
+          <div class="stat-value mono" id="modelAUPRC">—</div>
+          <div class="stat-trend">Test base rate <span id="modelBR"></span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Test cells</div>
+          <div class="stat-value mono" id="modelN">—</div>
+          <div class="stat-trend" id="modelNCountries">—</div>
+        </div>
+      </div>
+
+      <div class="row row-2">
+        <div class="card">
+          <div class="card-header"><div class="card-title">Model coefficients</div></div>
+          <div class="card-body" style="padding:0;">
+            <table class="data" id="coefTable">
+              <thead><tr><th>Feature</th><th class="num">Coefficient (standardized)</th><th>Interpretation</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div class="card-title">Per-pair test performance</div></div>
+          <div class="card-body" style="padding:0;">
+            <table class="data" id="perPairTable">
+              <thead><tr><th>Pair</th><th class="num">n</th><th class="num">+ events</th><th class="num">AUC</th><th class="num">AUPRC</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <div class="card-header"><div class="card-title">Risk-bucket realization (test set)</div></div>
+        <div class="card-body"><div id="bucketChart2" class="plotly-host"></div></div>
+      </div>
+    </section>
+
+    <!-- =================== ABOUT =================== -->
+    <section class="tab-panel" id="tab-about">
+      <div class="card">
+        <div class="card-header"><div class="card-title">About this work</div></div>
+        <div class="card-body" style="line-height:1.65;">
+          <p><strong>Project:</strong> Before the Breakpoint — detecting hidden AMR escalation from longitudinal MIC distribution drift.</p>
+          <p><strong>Data:</strong> Pfizer ATLAS surveillance database, non-USA partition, 2004–2024. <strong>845,288 isolates</strong> from <strong>82 countries</strong>, with MIC values for 30 antimicrobials and β-lactamase genotyping on a subset.</p>
+          <p><strong>Method, in brief.</strong> Most AMR surveillance uses categorical S/I/R interpretation, which by design fires only after a clinical breakpoint has been crossed. We instead track movement of isolates above the <em>epidemiological cutoff</em> (ECOFF, the upper edge of the wild-type distribution) but not yet above the clinical breakpoint. We aggregate these subthreshold signals into the <strong>Pre-Resistance Alert Score (PRAS)</strong>, an L2-regularised logistic regression with features for current level, recent trend, and acceleration of the ECOFF-exceeding fraction. The model is trained on 2007–2014 predictor years and validated on 2015–2019 — proper out-of-time prospective forecasting.</p>
+          <p><strong>Scope conditions.</strong> The framework works for pathogen-drug pairs where resistance is built incrementally (carbapenem resistance from porin loss + efflux + low-activity carbapenemases; novel β-lactam/BLI escape via point mutations). It does <em>not</em> work for single-step horizontal-gene-transfer resistance such as most CTX-M ESBLs against ceftriaxone, where MICs jump from &lt;0.06 to &gt;64 mg/L with nothing intermediate to "creep" through. The lead-time analysis (Phase 2 results) cleanly identifies which 7 of the 17 modelled pairs are framework-applicable.</p>
+          <p><strong>Validation strength.</strong> Out-of-time test AUC = 0.902, AUPRC = 0.848, against a base rate of 33.8%. Cells with PRAS &gt; 0.75 had a 97% subsequent crossing rate; PRAS &lt; 0.10, 8%.</p>
+          <p><strong>Limitations.</strong> ATLAS is not population-based — participating sites change over time. The 2016 broth-microdilution standardisation distorted longitudinal colistin testing (excluded). Countries that joined surveillance late (e.g. Argentina) are systematically under-flagged for events that preceded their participation. Confidence intervals on the PRAS itself are not provided; a Bayesian successor with posterior intervals is in development.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+/* =============================================================
+   DATA PAYLOAD — injected at build time
+   ============================================================= */
+const PAYLOAD = __PAYLOAD_PLACEHOLDER__;
+
+/* =============================================================
+   STATE
+   ============================================================= */
+const STATE = { theme: 'dark', activeTab: 'overview' };
+
+/* =============================================================
+   UTILITIES
+   ============================================================= */
+function fmt(n, d=1) { return (n==null || isNaN(n)) ? '—' : Number(n).toFixed(d); }
+function fmtPct(n, d=1) { return (n==null || isNaN(n)) ? '—' : Number(n).toFixed(d) + '%'; }
+function fmtInt(n) { return (n==null || isNaN(n)) ? '—' : Math.round(n).toLocaleString(); }
+function sevClass(p) {
+  if (p == null || isNaN(p)) return 'chip-muted';
+  if (p >= 0.5)  return 'chip-high';
+  if (p >= 0.25) return 'chip-med';
+  return 'chip-low';
+}
+function sevColor(p) {
+  if (p == null || isNaN(p)) return 'var(--text-2)';
+  if (p >= 0.5)  return 'var(--severity-high)';
+  if (p >= 0.25) return 'var(--severity-med)';
+  return 'var(--severity-low)';
+}
+
+/* Sparkline — small inline SVG */
+function sparkline(values, opts={}) {
+  const W = opts.w || 80, H = opts.h || 22, P = 1;
+  if (!values || !values.length) return '';
+  const vs = values.filter(v => v != null && !isNaN(v));
+  if (!vs.length) return '';
+  const min = Math.min(...vs), max = Math.max(...vs);
+  const rng = max - min || 1;
+  const n = values.length;
+  const xs = values.map((_,i) => P + i * (W - 2*P) / Math.max(n-1,1));
+  const ys = values.map(v => v == null ? null : H - P - (v - min) * (H - 2*P) / rng);
+  let path = '';
+  let started = false;
+  for (let i = 0; i < n; i++) {
+    if (ys[i] == null) { started = false; continue; }
+    path += (started ? ' L ' : 'M ') + xs[i].toFixed(1) + ' ' + ys[i].toFixed(1);
+    started = true;
+  }
+  const last = vs[vs.length - 1];
+  const lastIdx = values.length - 1;
+  const lastX = xs[lastIdx], lastY = ys[lastIdx];
+  const color = opts.color || 'var(--accent-2)';
+  let dot = '';
+  if (lastY != null) dot = `<circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="2" fill="${color}"></circle>`;
+  return `<svg class="spark" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <path d="${path}" fill="none" stroke="${color}" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+    ${dot}
+  </svg>`;
+}
+
+/* Plotly theme layout helpers */
+function pLayout(extra={}) {
+  const isDark = STATE.theme === 'dark';
+  return Object.assign({
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor:  'rgba(0,0,0,0)',
+    font: { color: isDark ? '#aab6c7' : '#4a5568', family: 'Inter, sans-serif', size: 12 },
+    margin: { l: 50, r: 18, t: 16, b: 42 },
+    xaxis: { gridcolor: isDark ? '#1f2937' : '#e6ebf1', linecolor: isDark ? '#2a3647' : '#d6dde6', zeroline: false },
+    yaxis: { gridcolor: isDark ? '#1f2937' : '#e6ebf1', linecolor: isDark ? '#2a3647' : '#d6dde6', zeroline: false },
+    legend: { font: { size: 11 }, bgcolor: 'rgba(0,0,0,0)', orientation: 'h', x: 0, y: 1.12 },
+    hoverlabel: { font: { family: 'Inter, sans-serif', size: 12 } },
+  }, extra);
+}
+function pConfig() {
+  return { displaylogo: false, responsive: true,
+           modeBarButtonsToRemove: ['lasso2d','select2d','autoScale2d','toggleSpikelines'] };
+}
+
+/* Color palette (categorical, theme-aware) */
+function palette() {
+  return ['#4cc9c1','#7aa9ff','#f4a747','#e6677a','#65d39a','#b18cff',
+          '#ff9a6b','#5cc8ff','#d5d34c','#ff6b9d','#7fd1a8','#c997ff',
+          '#feca57','#48dbfb','#1dd1a1','#ee5253','#576574','#222f3e'];
+}
+
+/* =============================================================
+   POPULATE OVERVIEW
+   ============================================================= */
+function renderKpis() {
+  const m = PAYLOAD.meta;
+  document.getElementById('dataInfo').textContent =
+    `ATLAS · ${fmtInt(m.total_isolates)} isolates · ${m.n_countries} countries`;
+  const tiles = [
+    { label: 'Test AUC', value: m.test_auc.toFixed(3), trend: m.model_train_window + ' → ' + m.model_test_window, accent: true },
+    { label: 'Test AUPRC', value: m.test_auprc.toFixed(3), trend: 'Base rate ' + (m.test_base_rate*100).toFixed(1) + '%', accent: true },
+    { label: 'Isolates analyzed', value: fmtInt(m.total_isolates), trend: m.year_min + '–' + m.year_max },
+    { label: 'Countries', value: m.n_countries, trend: 'Non-USA partition' },
+    { label: 'Pairs modeled', value: m.n_pairs_modeled, trend: m.n_framework_pairs + ' framework-applicable' },
+    { label: 'High alerts (latest)', value: PAYLOAD.alerts.filter(a => a.PRAS > 0.5).length, trend: 'Of top 40 ranked' },
+  ];
+  document.getElementById('kpiRow').innerHTML = tiles.map(t => `
+    <div class="stat ${t.accent ? 'stat-accent' : ''}">
+      <div class="stat-label">${t.label}</div>
+      <div class="stat-value mono">${t.value}</div>
+      <div class="stat-trend">${t.trend}</div>
+    </div>
+  `).join('');
+}
+
+function renderAlerts() {
+  const rows = PAYLOAD.alerts.map(a => {
+    const sevC = sevColor(a.PRAS);
+    const sevTxt = a.PRAS >= 0.5 ? 'HIGH' : a.PRAS >= 0.25 ? 'MED' : 'LOW';
+    const pctBar = a.PRAS != null ? `<div class="pras-bar"><div class="pras-bar-fill" style="width:${(a.PRAS*100).toFixed(0)}%;background:${sevC};"></div></div>` : '';
+    const spark = sparkline(a.sparkline_bp, { color: 'var(--severity-high)', w: 90, h: 22 });
+    return `<tr>
+      <td><strong>${a.country}</strong></td>
+      <td>${a.species.split(' ').map(w=>w[0]+'.').slice(0,1).join('')+' '+a.species.split(' ').slice(1).join(' ')} × ${a.drug}</td>
+      <td class="num">${a.year}</td>
+      <td class="num">${fmtInt(a.n)}</td>
+      <td class="num">${fmtPct(a.pct_ecoff)}</td>
+      <td class="num"><strong>${fmtPct(a.pct_bp)}</strong></td>
+      <td class="spark-cell">${spark}</td>
+      <td class="num">
+        <span class="pras-cell">
+          ${pctBar}
+          <span class="mono" style="color:${sevC};font-weight:600;">${fmt(a.PRAS,3)}</span>
+        </span>
+      </td>
+    </tr>`;
+  }).join('');
+  document.querySelector('#alertsTable tbody').innerHTML = rows;
+}
+
+function renderPairsTable() {
+  const rows = PAYLOAD.pairs.slice().sort((a,b) => (b.latest_PRAS||0) - (a.latest_PRAS||0)).map(p => {
+    const spark = sparkline(p.sparkline_bp, { color: 'var(--accent)', w: 90, h: 22 });
+    const sevC = sevColor(p.latest_PRAS);
+    const inFw = p.in_framework ? `<span class="chip chip-info">framework</span>` : `<span class="chip chip-muted">descriptive</span>`;
+    return `<tr>
+      <td>${p.species.split(' ').map(w=>w[0]+'.').slice(0,1).join('')+' '+p.species.split(' ').slice(1).join(' ')} × ${p.drug}</td>
+      <td class="num">${fmtInt(p.n_total)}</td>
+      <td class="num">${p.year_min}–${p.year_max}</td>
+      <td class="num">${fmtPct(p.latest_pct_bp)}</td>
+      <td>${spark}</td>
+      <td class="num"><span class="mono" style="color:${sevC};font-weight:600;">${p.latest_PRAS != null ? fmt(p.latest_PRAS,3) : '—'}</span></td>
+      <td>${inFw}</td>
+    </tr>`;
+  }).join('');
+  document.querySelector('#pairsTable tbody').innerHTML = rows;
+}
+
+function renderBucketChart(hostId) {
+  const bk = PAYLOAD.bucket_realization;
+  const colors = bk.map(b => {
+    const m = b.bucket.match(/([0-9.]+)/g);
+    const mid = (parseFloat(m[0]) + parseFloat(m[1])) / 2;
+    return mid > 0.6 ? '#e6677a' : mid > 0.35 ? '#f4a747' : mid > 0.15 ? '#7aa9ff' : '#65d39a';
+  });
+  const trace = {
+    x: bk.map(b => b.bucket),
+    y: bk.map(b => b.pct_crossed),
+    text: bk.map(b => `n=${b.n}<br>${b.pct_crossed.toFixed(0)}% crossed`),
+    textposition: 'outside',
+    type: 'bar',
+    marker: { color: colors, line: { width: 0 } },
+    hovertemplate: '%{x}<br>%{y:.1f}% subsequently crossed<extra></extra>',
+  };
+  Plotly.newPlot(hostId, [trace], pLayout({
+    yaxis: { title: '% that crossed BP within 5y', range: [0, 110], gridcolor: STATE.theme==='dark'?'#1f2937':'#e6ebf1' },
+    xaxis: { title: 'PRAS bucket', gridcolor: 'transparent' },
+    margin: { l: 60, r: 18, t: 26, b: 50 },
+  }), pConfig());
+}
+
+function renderGlobalTrendBP() {
+  const ts = PAYLOAD.timeseries;
+  const fwPairs = PAYLOAD.pairs.filter(p => p.in_framework);
+  const palette_ = palette();
+  const traces = fwPairs.map((p, i) => {
+    const sub = ts.filter(t => t.Species===p.species && t.Drug===p.drug);
+    const byY = {};
+    sub.forEach(t => {
+      if (!byY[t.Year]) byY[t.Year] = { num: 0, denom: 0 };
+      if (t.pct_above_bp != null) { byY[t.Year].num += t.pct_above_bp * t.n; byY[t.Year].denom += t.n; }
+    });
+    const years = Object.keys(byY).map(Number).sort((a,b)=>a-b);
+    const vals = years.map(y => byY[y].denom > 0 ? byY[y].num / byY[y].denom : null);
+    return {
+      x: years, y: vals,
+      name: `${p.species.split(' ')[0][0]}. ${p.species.split(' ').slice(1).join(' ')} × ${p.drug}`,
+      mode: 'lines+markers', line: { color: palette_[i], width: 1.8 },
+      marker: { size: 5 }, type: 'scatter',
+    };
+  });
+  Plotly.newPlot('globalTrendBP', traces, pLayout({
+    yaxis: { title: '% above breakpoint (volume-weighted)' },
+    xaxis: { title: 'Year', dtick: 2 },
+    margin: { l: 50, r: 18, t: 16, b: 42 },
+    legend: { orientation: 'v', x: 1.01, y: 1, font: { size: 10 } },
+  }), pConfig());
+}
+
+/* =============================================================
+   MAP TAB
+   ============================================================= */
+function initMap() {
+  const sel = document.getElementById('mapPair');
+  PAYLOAD.pairs.filter(p => p.in_framework).forEach(p => {
+    const o = document.createElement('option');
+    o.value = `${p.species}__${p.drug}`;
+    o.textContent = `${p.species} × ${p.drug}`;
+    sel.appendChild(o);
+  });
+  sel.value = 'Klebsiella pneumoniae__Ceftazidime avibactam';
+
+  const yrSel = document.getElementById('mapYear');
+  for (let y = 2024; y >= 2008; y--) {
+    const o = document.createElement('option');
+    o.value = y; o.textContent = y;
+    yrSel.appendChild(o);
+  }
+  yrSel.value = '2023';
+
+  sel.addEventListener('change', drawMap);
+  yrSel.addEventListener('change', drawMap);
+  document.getElementById('mapMetric').addEventListener('change', drawMap);
+  drawMap();
+}
+function drawMap() {
+  const [sp, dr] = document.getElementById('mapPair').value.split('__');
+  const yr = +document.getElementById('mapYear').value;
+  const metric = document.getElementById('mapMetric').value;
+  const data = PAYLOAD.timeseries.filter(t => t.Species===sp && t.Drug===dr && t.Year===yr && t[metric] != null);
+  const isoCol = data.map(d => PAYLOAD.country_iso[d.Country] || '').filter(x => x);
+  const dataIso = data.filter(d => PAYLOAD.country_iso[d.Country]);
+  const vals = dataIso.map(d => d[metric]);
+  const txt = dataIso.map(d => `<b>${d.Country}</b><br>${sp.split(' ').slice(0,2).join(' ')} × ${dr}<br>` +
+    `% above ECOFF: ${fmtPct(d.pct_above_ecoff)}<br>` +
+    `% above BP: ${fmtPct(d.pct_above_bp)}<br>` +
+    `PRAS: ${d.PRAS != null ? fmt(d.PRAS,3) : '—'}<br>n=${d.n}`);
+  const colorScale = metric === 'PRAS'
+    ? [[0,'#1a4d4d'],[0.25,'#4cc9c1'],[0.5,'#f4a747'],[0.75,'#e6677a'],[1,'#a4243f']]
+    : [[0,'#1a3b5e'],[0.3,'#4789c2'],[0.6,'#f4a747'],[1,'#e6677a']];
+  const max = metric === 'PRAS' ? 1 : Math.max(50, Math.ceil(Math.max(...vals)/10)*10);
+  const trace = {
+    type: 'choropleth',
+    locations: dataIso.map(d => PAYLOAD.country_iso[d.Country]),
+    z: vals, text: txt, hoverinfo: 'text',
+    colorscale: colorScale, zmin: 0, zmax: max,
+    colorbar: { title: metric === 'PRAS' ? 'PRAS' : '%', thickness: 12, len: 0.7, x: 1.02 },
+    marker: { line: { color: STATE.theme === 'dark' ? '#0b1015' : '#fff', width: 0.5 } },
+  };
+  const layout = pLayout({
+    geo: {
+      bgcolor: 'rgba(0,0,0,0)',
+      showcountries: true,
+      countrycolor: STATE.theme === 'dark' ? '#2a3647' : '#d6dde6',
+      showland: true,
+      landcolor: STATE.theme === 'dark' ? '#131a23' : '#f0f3f7',
+      showocean: false, showframe: false, showcoastlines: false,
+      projection: { type: 'natural earth' },
+    },
+    margin: { l: 0, r: 0, t: 4, b: 0 },
+  });
+  Plotly.newPlot('mapPlot', [trace], layout, pConfig());
+}
+
+/* =============================================================
+   PAIR EXPLORER
+   ============================================================= */
+function initPairExplorer() {
+  const sel = document.getElementById('pairExpSelect');
+  PAYLOAD.pairs.filter(p => p.in_framework).forEach(p => {
+    const o = document.createElement('option');
+    o.value = `${p.species}__${p.drug}`;
+    o.textContent = `${p.species} × ${p.drug}`;
+    sel.appendChild(o);
+  });
+  sel.value = 'Klebsiella pneumoniae__Ceftazidime avibactam';
+  sel.addEventListener('change', drawPairExplorer);
+  document.querySelectorAll('#pairExpFilter .pill').forEach(p => {
+    p.addEventListener('click', e => {
+      document.querySelectorAll('#pairExpFilter .pill').forEach(x => x.classList.remove('active'));
+      e.target.classList.add('active');
+      drawPairExplorer();
+    });
+  });
+  drawPairExplorer();
+}
+function drawPairExplorer() {
+  const [sp, dr] = document.getElementById('pairExpSelect').value.split('__');
+  const filter = document.querySelector('#pairExpFilter .pill.active').dataset.filter;
+  const ts = PAYLOAD.timeseries.filter(t => t.Species===sp && t.Drug===dr);
+  // pick countries by latest PRAS if applicable, else by volume
+  const lastByCountry = {};
+  ts.forEach(t => {
+    if (!lastByCountry[t.Country] || t.Year > lastByCountry[t.Country].Year) lastByCountry[t.Country] = t;
+  });
+  let countries = Object.keys(lastByCountry);
+  if (filter === 'high') countries = countries.filter(c => (lastByCountry[c].PRAS||0) > 0.5);
+  if (filter === 'rising') {
+    countries = countries.filter(c => {
+      const series = ts.filter(t => t.Country===c).sort((a,b)=>a.Year-b.Year);
+      if (series.length < 3) return false;
+      const first = series.slice(0, Math.min(3, series.length))
+        .reduce((s,r)=> s + (r.pct_above_bp||0), 0) / Math.min(3, series.length);
+      const last = series.slice(-3)
+        .reduce((s,r)=> s + (r.pct_above_bp||0), 0) / Math.min(3, series.length);
+      return last - first > 5;
+    });
+  }
+  // top 15 by latest pct_above_bp
+  countries.sort((a,b) => (lastByCountry[b].pct_above_bp||0) - (lastByCountry[a].pct_above_bp||0));
+  countries = countries.slice(0, 15);
+
+  const palette_ = palette();
+  const bpTraces = countries.map((c,i) => {
+    const s = ts.filter(t => t.Country===c).sort((a,b)=>a.Year-b.Year);
+    return { x: s.map(t=>t.Year), y: s.map(t=>t.pct_above_bp), name: c,
+             mode: 'lines+markers', line:{color:palette_[i%palette_.length], width:1.6},
+             marker: { size: 4 }, type: 'scatter' };
+  });
+  const prasTraces = countries.map((c,i) => {
+    const s = ts.filter(t => t.Country===c).sort((a,b)=>a.Year-b.Year);
+    return { x: s.map(t=>t.Year), y: s.map(t=>t.PRAS), name: c,
+             mode: 'lines+markers', line:{color:palette_[i%palette_.length], width:1.6},
+             marker: { size: 4 }, type: 'scatter' };
+  });
+  Plotly.newPlot('pairCountryBP', bpTraces, pLayout({
+    yaxis: { title: '% above breakpoint', rangemode: 'tozero' },
+    xaxis: { title: 'Year', dtick: 2 },
+    shapes: [{ type:'line', x0:2000, x1:2030, y0:10, y1:10,
+               line:{ color:'rgba(230,103,122,0.5)', width:1, dash:'dot'}, layer:'below' }],
+    legend: { orientation: 'v', x: 1.01, y: 1, font: { size: 10 } },
+  }), pConfig());
+  Plotly.newPlot('pairCountryPRAS', prasTraces, pLayout({
+    yaxis: { title: 'PRAS', range: [0, 1] },
+    xaxis: { title: 'Year', dtick: 2 },
+    shapes: [{ type:'line', x0:2000, x1:2030, y0:0.5, y1:0.5,
+               line:{ color:'rgba(244,167,71,0.5)', width:1, dash:'dot'}, layer:'below' }],
+    legend: { orientation: 'v', x: 1.01, y: 1, font: { size: 10 } },
+  }), pConfig());
+
+  // heatmap
+  const allCountries = Object.keys(lastByCountry).sort((a,b)=>(lastByCountry[b].pct_above_bp||0)-(lastByCountry[a].pct_above_bp||0)).slice(0,30);
+  const years = [...new Set(ts.map(t=>t.Year))].sort((a,b)=>a-b);
+  const z = allCountries.map(c => years.map(y => {
+    const m = ts.find(t => t.Country===c && t.Year===y);
+    return m ? m.pct_above_bp : null;
+  }));
+  const heat = {
+    type: 'heatmap', x: years, y: allCountries, z,
+    colorscale: [[0,'#1a3b5e'],[0.2,'#4789c2'],[0.5,'#f4a747'],[0.8,'#e6677a'],[1,'#a4243f']],
+    hovertemplate: '%{y}<br>%{x}: %{z:.1f}%<extra></extra>',
+    colorbar: { title:'% above BP', thickness:10 },
+  };
+  Plotly.newPlot('pairHeatmap', [heat], pLayout({
+    yaxis: { automargin: true, tickfont: { size: 10 } },
+    xaxis: { dtick: 1 },
+    margin: { l: 130, r: 18, t: 16, b: 42 },
+  }), pConfig());
+}
+
+/* =============================================================
+   COUNTRY PROFILE
+   ============================================================= */
+function initCountry() {
+  const sel = document.getElementById('countrySelect');
+  const cmpSel = document.getElementById('countryCompare');
+  const cs = PAYLOAD.countries.slice().sort((a,b) => (b.max_PRAS_latest||0) - (a.max_PRAS_latest||0));
+  cs.forEach(c => {
+    [sel, cmpSel].forEach(s => {
+      const o = document.createElement('option');
+      o.value = c.country; o.textContent = c.country;
+      s.appendChild(o);
+    });
+  });
+  sel.value = 'Greece';
+  sel.addEventListener('change', drawCountry);
+  cmpSel.addEventListener('change', drawCountry);
+  drawCountry();
+}
+function drawCountry() {
+  const cName = document.getElementById('countrySelect').value;
+  const cCmp  = document.getElementById('countryCompare').value;
+  const c = PAYLOAD.countries.find(x => x.country === cName);
+  // KPIs
+  const kpis = [
+    { label: 'Total isolates', value: fmtInt(c.n_total), trend: c.year_min + '–' + c.year_max },
+    { label: 'Pairs with data', value: c.n_pairs_with_data, trend: 'Of ' + PAYLOAD.meta.n_pairs_modeled + ' total' },
+    { label: 'Avg PRAS (latest)', value: c.avg_PRAS_latest != null ? fmt(c.avg_PRAS_latest,3) : '—', trend: c.latest_scored_year || '—', accent: c.avg_PRAS_latest > 0.5 },
+    { label: 'Max PRAS (latest)', value: c.max_PRAS_latest != null ? fmt(c.max_PRAS_latest,3) : '—', trend: 'Across pairs', accent: c.max_PRAS_latest > 0.5 },
+    { label: 'High alerts', value: c.n_high_alerts, trend: 'PRAS > 0.5' },
+    { label: 'ISO', value: c.iso || '—', trend: 'For map' },
+  ];
+  document.getElementById('countryKpis').innerHTML = kpis.map(k => `
+    <div class="stat ${k.accent ? 'stat-accent' : ''}">
+      <div class="stat-label">${k.label}</div>
+      <div class="stat-value mono">${k.value}</div>
+      <div class="stat-trend">${k.trend}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('countryCompLabel').textContent =
+    cCmp ? `${cName} (solid) vs ${cCmp} (dashed)` :
+           `${cName} — each panel shows % above ECOFF (orange), % above breakpoint (red), and PRAS (purple, right axis)`;
+
+  // small multiples — one trace set per pair
+  const fwPairs = PAYLOAD.pairs.filter(p => p.in_framework);
+  const otherPairs = PAYLOAD.pairs.filter(p => !p.in_framework);
+  const pairs = [...fwPairs, ...otherPairs];
+  const n = pairs.length;
+  const ncols = 3, nrows = Math.ceil(n / ncols);
+  // build subplots manually with annotation titles
+  const subplots = [];
+  const traces = [];
+  const annotations = [];
+  const shapes = [];
+  pairs.forEach((p, i) => {
+    const row = Math.floor(i / ncols), col = i % ncols;
+    const axIdx = i + 1;
+    const xax = axIdx === 1 ? 'x' : 'x' + axIdx;
+    const yax = axIdx === 1 ? 'y' : 'y' + axIdx;
+    const y2ax = 'y' + (axIdx + n);
+    const ts = PAYLOAD.timeseries.filter(t => t.Country===cName && t.Species===p.species && t.Drug===p.drug)
+                                  .sort((a,b)=>a.Year-b.Year);
+    if (!ts.length) return;
+    const tsCmp = cCmp ? PAYLOAD.timeseries.filter(t => t.Country===cCmp && t.Species===p.species && t.Drug===p.drug)
+                                            .sort((a,b)=>a.Year-b.Year) : [];
+    traces.push({ x: ts.map(t=>t.Year), y: ts.map(t=>t.pct_above_ecoff),
+                  mode: 'lines', line:{ color:'#f4a747', width:1.6 }, xaxis:xax, yaxis:yax,
+                  hovertemplate:`${p.species} × ${p.drug}<br>${cName}<br>%{x}: %{y:.1f}% above ECOFF<extra></extra>`,
+                  showlegend: false });
+    traces.push({ x: ts.map(t=>t.Year), y: ts.map(t=>t.pct_above_bp),
+                  mode: 'lines', line:{ color:'#e6677a', width:1.6 }, xaxis:xax, yaxis:yax,
+                  hovertemplate: `%{x}: %{y:.1f}% above BP<extra></extra>`, showlegend: false });
+    if (p.in_framework) {
+      traces.push({ x: ts.map(t=>t.Year), y: ts.map(t=>t.PRAS),
+                    mode: 'lines', line:{ color:'#b18cff', width:1.4, dash:'dot' }, xaxis:xax, yaxis:y2ax,
+                    hovertemplate: `%{x}: PRAS %{y:.3f}<extra></extra>`, showlegend: false });
+    }
+    if (tsCmp.length) {
+      traces.push({ x: tsCmp.map(t=>t.Year), y: tsCmp.map(t=>t.pct_above_ecoff),
+                    mode: 'lines', line:{ color:'#f4a747', width:1.4, dash:'dash' }, xaxis:xax, yaxis:yax,
+                    showlegend: false, hoverinfo:'skip' });
+      traces.push({ x: tsCmp.map(t=>t.Year), y: tsCmp.map(t=>t.pct_above_bp),
+                    mode: 'lines', line:{ color:'#e6677a', width:1.4, dash:'dash' }, xaxis:xax, yaxis:yax,
+                    showlegend: false, hoverinfo:'skip' });
+    }
+    // Title annotation
+    const title = `${p.species.split(' ')[0][0]}. ${p.species.split(' ').slice(1).join(' ')} × ${p.drug}`;
+    annotations.push({
+      text: title, x: 0.5, y: 1.07, xref: 'x'+axIdx+' domain', yref: 'y'+axIdx+' domain',
+      xanchor:'center', yanchor:'bottom', showarrow:false, font:{ size: 11, color: STATE.theme==='dark'?'#aab6c7':'#4a5568' },
+    });
+  });
+  // construct subplot axes
+  const layout = pLayout({
+    grid: { rows: nrows, columns: ncols, pattern: 'independent', xgap: 0.05, ygap: 0.18 },
+    annotations,
+    height: nrows * 220 + 50,
+    margin: { l: 40, r: 40, t: 16, b: 30 },
+    showlegend: false,
+  });
+  // ensure each subplot has its y2 axis on the right
+  for (let i = 0; i < n; i++) {
+    const idx = i + 1, idx2 = n + idx;
+    layout['xaxis' + (idx === 1 ? '' : idx)] = layout['xaxis' + (idx === 1 ? '' : idx)] || {};
+    layout['yaxis' + (idx === 1 ? '' : idx)] = Object.assign({ rangemode:'tozero', title:'', tickfont:{size:9} }, layout['yaxis' + (idx === 1 ? '' : idx)] || {});
+    layout['yaxis' + idx2] = {
+      anchor: idx === 1 ? 'x' : 'x' + idx,
+      overlaying: idx === 1 ? 'y' : 'y' + idx,
+      side: 'right', range: [0, 1], showgrid: false, tickfont:{size:9, color:'#b18cff'},
+    };
+  }
+  Plotly.newPlot('countrySmallMultiples', traces, layout, pConfig());
+}
+
+/* =============================================================
+   MODEL TAB
+   ============================================================= */
+function renderModel() {
+  const m = PAYLOAD.meta;
+  document.getElementById('modelAUC').textContent = m.test_auc.toFixed(3);
+  document.getElementById('modelAUPRC').textContent = m.test_auprc.toFixed(3);
+  document.getElementById('modelBR').textContent = (m.test_base_rate*100).toFixed(1)+'%';
+  document.getElementById('modelN').textContent = fmtInt(m.n_test_cells);
+  document.getElementById('modelNCountries').textContent = 'Across ' + m.n_framework_pairs + ' framework-applicable pairs';
+
+  // coef table
+  document.querySelector('#coefTable tbody').innerHTML = m.coefficients.map(c => `
+    <tr><td><code class="mono">${c.feature}</code></td>
+    <td class="num"><strong>${(+c.coef_standardized).toFixed(3)}</strong></td>
+    <td class="text-muted">${c.interpretation}</td></tr>
+  `).join('');
+  // per pair
+  document.querySelector('#perPairTable tbody').innerHTML = m.per_pair_metrics.map(p => {
+    if (!p.Species) return '';
+    return `<tr>
+      <td>${p.Species.split(' ')[0][0]}. ${p.Species.split(' ').slice(1).join(' ')} × ${p.Drug}</td>
+      <td class="num">${fmtInt(p.n)}</td>
+      <td class="num">${fmtInt(p.positives)}</td>
+      <td class="num"><strong>${p.AUC != null ? (+p.AUC).toFixed(3) : '—'}</strong></td>
+      <td class="num">${p.AUPRC != null ? (+p.AUPRC).toFixed(3) : '—'}</td>
+    </tr>`;
+  }).join('');
+  renderBucketChart('bucketChart2');
+}
+
+/* =============================================================
+   TABS / THEME
+   ============================================================= */
+function setTab(name) {
+  STATE.activeTab = name;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
+  // Plotly resize trick
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 60);
+  if (name === 'map') drawMap();
+  if (name === 'pair') drawPairExplorer();
+  if (name === 'country') drawCountry();
+}
+function setTheme(t) {
+  STATE.theme = t;
+  document.documentElement.dataset.theme = t;
+  document.getElementById('themeToggle').textContent = t === 'dark' ? '◐' : '◑';
+  // redraw plotly figures
+  renderBucketChart('bucketChart');
+  renderGlobalTrendBP();
+  if (STATE.activeTab === 'map') drawMap();
+  if (STATE.activeTab === 'pair') drawPairExplorer();
+  if (STATE.activeTab === 'country') drawCountry();
+  if (STATE.activeTab === 'model') renderBucketChart('bucketChart2');
+}
+
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => setTab(t.dataset.tab)));
+document.getElementById('themeToggle').addEventListener('click', () => setTheme(STATE.theme === 'dark' ? 'light' : 'dark'));
+
+/* =============================================================
+   BOOT
+   ============================================================= */
+renderKpis();
+renderAlerts();
+renderPairsTable();
+renderBucketChart('bucketChart');
+renderGlobalTrendBP();
+initMap();
+initPairExplorer();
+initCountry();
+renderModel();
+</script>
+</body>
+</html>

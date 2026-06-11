@@ -1,0 +1,269 @@
+Species,Drug,window_start,window_end,n_years,yr_min,yr_max,n_total,median_yearly_n,country_year_cells_ge30,pct_left,pct_right,pct_exact,VIABLE
+Acinetobacter baumannii,Amikacin,2012.0,2024.0,13.0,2012.0,2024.0,26672.0,1758.0,288.0,0.2,51.5,48.3,True
+Acinetobacter baumannii,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,34481.0,1705.0,374.0,0.2,69.3,30.5,True
+Acinetobacter baumannii,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,35507.0,1803.0,386.0,0.2,75.3,24.5,True
+Acinetobacter baumannii,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Acinetobacter baumannii,Aztreonam,2012.0,2024.0,13.0,2012.0,2024.0,21231.0,1516.0,237.0,0.0,26.2,73.8,True
+Acinetobacter baumannii,Aztreonam avibactam,2012.0,2024.0,12.0,2012.0,2024.0,20982.0,1556.0,233.0,0.1,21.5,78.4,True
+Acinetobacter baumannii,Cefepime,2008.0,2024.0,17.0,2008.0,2024.0,34007.0,1848.0,364.0,1.3,49.7,49.0,True
+Acinetobacter baumannii,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,17819.0,2960.0,204.0,0.0,10.6,89.3,False
+Acinetobacter baumannii,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,21231.0,1516.0,237.0,0.0,71.5,28.5,True
+Acinetobacter baumannii,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,26672.0,1758.0,288.0,0.5,53.9,45.6,True
+Acinetobacter baumannii,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,21231.0,1516.0,237.0,0.0,20.7,79.3,True
+Acinetobacter baumannii,Ceftolozane tazobactam,2014.0,2024.0,5.0,2020.0,2024.0,12691.0,2959.0,140.0,7.6,51.6,40.8,False
+Acinetobacter baumannii,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,17111.0,1084.0,170.0,0.2,57.7,42.1,True
+Acinetobacter baumannii,Ciprofloxacin,2018.0,2024.0,7.0,2018.0,2024.0,17819.0,2960.0,204.0,6.3,71.8,21.9,False
+Acinetobacter baumannii,Colistin,2014.0,2024.0,11.0,2014.0,2024.0,20142.0,1758.0,229.0,7.7,2.4,89.8,True
+Acinetobacter baumannii,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,3412.0,610.0,33.0,0.0,64.6,35.4,False
+Acinetobacter baumannii,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Acinetobacter baumannii,Gentamicin,2014.0,2024.0,7.0,2018.0,2024.0,17819.0,2960.0,204.0,0.2,59.3,40.6,False
+Acinetobacter baumannii,Imipenem,2012.0,2024.0,13.0,2012.0,2024.0,21231.0,1516.0,237.0,0.1,68.8,31.1,True
+Acinetobacter baumannii,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,37717.0,1653.0,408.0,11.7,39.1,49.2,True
+Acinetobacter baumannii,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,35478.0,1803.0,386.0,0.9,58.4,40.7,True
+Acinetobacter baumannii,Meropenem vaborbactam,2020.0,2024.0,5.0,2020.0,2024.0,12692.0,2960.0,140.0,0.5,67.7,31.8,False
+Acinetobacter baumannii,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,14276.0,1016.0,139.0,46.8,2.0,51.1,True
+Acinetobacter baumannii,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,35507.0,1803.0,386.0,8.5,63.6,27.9,True
+Acinetobacter baumannii,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,35507.0,1803.0,386.0,0.1,0.2,99.6,True
+Acinetobacter baumannii,Trimethoprim sulfa,2014.0,2024.0,7.0,2018.0,2024.0,17819.0,2960.0,204.0,32.7,41.0,26.3,False
+Enterobacter cloacae,Amikacin,2012.0,2024.0,13.0,2012.0,2024.0,21370.0,1996.0,208.0,1.0,1.4,97.7,True
+Enterobacter cloacae,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,33675.0,2205.0,324.0,0.1,83.5,16.4,True
+Enterobacter cloacae,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,33653.0,2194.0,324.0,0.0,78.8,21.1,True
+Enterobacter cloacae,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterobacter cloacae,Aztreonam,2012.0,2024.0,13.0,2012.0,2024.0,11451.0,821.0,127.0,1.1,4.5,94.4,True
+Enterobacter cloacae,Aztreonam avibactam,2012.0,2024.0,13.0,2012.0,2024.0,11133.0,821.0,123.0,3.5,0.0,96.5,True
+Enterobacter cloacae,Cefepime,2008.0,2024.0,17.0,2008.0,2024.0,31567.0,2303.0,299.0,60.7,7.9,31.3,True
+Enterobacter cloacae,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,6392.0,683.0,65.0,4.1,4.9,90.9,False
+Enterobacter cloacae,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,11451.0,821.0,127.0,0.2,28.6,71.2,True
+Enterobacter cloacae,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,21361.0,1987.0,208.0,26.1,17.7,56.2,True
+Enterobacter cloacae,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,11451.0,821.0,127.0,0.2,2.7,97.0,True
+Enterobacter cloacae,Ceftolozane tazobactam,2014.0,2024.0,6.0,2017.0,2024.0,3478.0,537.0,32.0,0.1,7.5,92.4,False
+Enterobacter cloacae,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,27177.0,1815.0,251.0,6.4,22.0,71.6,True
+Enterobacter cloacae,Ciprofloxacin,2018.0,2024.0,7.0,2018.0,2024.0,6392.0,683.0,65.0,70.1,10.8,19.1,False
+Enterobacter cloacae,Colistin,2014.0,2024.0,11.0,2014.0,2024.0,10072.0,875.0,117.0,8.1,8.2,83.7,True
+Enterobacter cloacae,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,5059.0,848.0,62.0,0.1,1.5,98.4,False
+Enterobacter cloacae,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterobacter cloacae,Gentamicin,2014.0,2024.0,7.0,2018.0,2024.0,6392.0,683.0,65.0,2.5,13.4,84.1,False
+Enterobacter cloacae,Imipenem,2012.0,2024.0,13.0,2012.0,2024.0,11451.0,821.0,127.0,0.1,2.4,97.5,True
+Enterobacter cloacae,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,36612.0,1996.0,356.0,15.0,8.6,76.4,True
+Enterobacter cloacae,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,33614.0,2176.0,324.0,55.7,1.0,43.3,True
+Enterobacter cloacae,Meropenem vaborbactam,2020.0,2024.0,5.0,2020.0,2024.0,2529.0,391.0,15.0,92.8,1.7,5.5,False
+Enterobacter cloacae,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,22224.0,1794.0,188.0,1.4,6.8,91.8,True
+Enterobacter cloacae,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,33675.0,2205.0,324.0,0.2,10.5,89.4,True
+Enterobacter cloacae,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,33675.0,2205.0,324.0,0.0,0.0,99.9,True
+Enterobacter cloacae,Trimethoprim sulfa,2014.0,2024.0,7.0,2018.0,2024.0,6392.0,683.0,65.0,74.5,22.0,3.5,False
+Enterococcus faecalis,Amoxycillin clavulanate,2007.0,2024.0,11.0,2007.0,2017.0,15825.0,1333.0,157.0,0.3,1.2,98.5,True
+Enterococcus faecalis,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,30333.0,1782.0,356.0,0.6,0.7,98.7,True
+Enterococcus faecalis,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterococcus faecalis,Ceftaroline,2012.0,2024.0,10.0,2012.0,2024.0,17516.0,1879.0,238.0,0.2,8.3,91.5,True
+Enterococcus faecalis,Ceftazidime,2012.0,2024.0,3.0,2012.0,2014.0,3008.0,1116.0,39.0,0.0,96.6,3.4,False
+Enterococcus faecalis,Ceftazidime avibactam,2012.0,2024.0,3.0,2012.0,2014.0,3008.0,1116.0,39.0,0.0,96.5,3.5,False
+Enterococcus faecalis,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,14669.0,1026.0,135.0,0.2,63.3,36.5,True
+Enterococcus faecalis,Doripenem,2012.0,2017.0,3.0,2012.0,2014.0,3008.0,1116.0,39.0,0.0,3.8,96.2,False
+Enterococcus faecalis,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterococcus faecalis,Gentamicin,2014.0,2024.0,8.0,2014.0,2024.0,14536.0,1981.0,199.0,0.5,33.8,65.7,False
+Enterococcus faecalis,Imipenem,2012.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterococcus faecalis,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,32157.0,1564.0,376.0,0.1,19.7,80.2,True
+Enterococcus faecalis,Meropenem,2007.0,2024.0,11.0,2007.0,2017.0,15785.0,1333.0,156.0,0.5,3.4,96.1,True
+Enterococcus faecalis,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,15825.0,1333.0,157.0,15.2,32.5,52.3,True
+Enterococcus faecalis,Piperacillin tazobactam,2007.0,2024.0,11.0,2007.0,2017.0,15825.0,1333.0,157.0,1.0,2.5,96.4,True
+Enterococcus faecalis,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,30333.0,1782.0,356.0,0.3,0.1,99.6,True
+Enterococcus faecalis,Trimethoprim sulfa,2014.0,2024.0,8.0,2014.0,2024.0,14536.0,1981.0,199.0,31.8,20.6,47.6,False
+Enterococcus faecium,Amoxycillin clavulanate,2007.0,2024.0,11.0,2007.0,2017.0,8632.0,655.0,84.0,0.1,82.7,17.2,True
+Enterococcus faecium,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,15977.0,911.0,154.0,1.0,84.6,14.5,True
+Enterococcus faecium,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterococcus faecium,Ceftaroline,2012.0,2024.0,10.0,2012.0,2024.0,9712.0,934.0,95.0,0.3,82.4,17.3,True
+Enterococcus faecium,Ceftazidime,2012.0,2024.0,3.0,2012.0,2014.0,2367.0,846.0,25.0,0.0,99.3,0.7,False
+Enterococcus faecium,Ceftazidime avibactam,2012.0,2024.0,3.0,2012.0,2014.0,2367.0,846.0,25.0,0.0,99.3,0.7,False
+Enterococcus faecium,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,6917.0,532.0,61.0,0.1,89.0,10.9,False
+Enterococcus faecium,Doripenem,2012.0,2017.0,3.0,2012.0,2014.0,2367.0,846.0,25.0,0.1,92.7,7.2,False
+Enterococcus faecium,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterococcus faecium,Gentamicin,2014.0,2024.0,8.0,2014.0,2024.0,7375.0,1008.0,71.0,1.7,44.2,54.1,False
+Enterococcus faecium,Imipenem,2012.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Enterococcus faecium,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,16598.0,812.0,156.0,0.1,77.1,22.8,True
+Enterococcus faecium,Meropenem,2007.0,2024.0,11.0,2007.0,2017.0,8616.0,655.0,84.0,0.2,88.7,11.1,False
+Enterococcus faecium,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,8632.0,655.0,84.0,42.4,16.8,40.8,True
+Enterococcus faecium,Piperacillin tazobactam,2007.0,2024.0,11.0,2007.0,2017.0,8632.0,655.0,84.0,0.2,86.3,13.6,False
+Enterococcus faecium,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,15977.0,911.0,154.0,0.6,0.3,99.1,True
+Enterococcus faecium,Trimethoprim sulfa,2014.0,2024.0,8.0,2014.0,2024.0,7375.0,1008.0,71.0,6.2,47.4,46.4,False
+Escherichia coli,Amikacin,2012.0,2024.0,13.0,2012.0,2024.0,82780.0,6371.0,559.0,0.3,0.9,98.8,True
+Escherichia coli,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,100429.0,5667.0,697.0,1.3,7.1,91.6,True
+Escherichia coli,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,100429.0,5667.0,697.0,0.7,66.7,32.6,True
+Escherichia coli,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Escherichia coli,Aztreonam,2012.0,2024.0,13.0,2012.0,2024.0,66452.0,5218.0,527.0,2.5,3.8,93.7,True
+Escherichia coli,Aztreonam avibactam,2012.0,2024.0,13.0,2012.0,2024.0,65290.0,5126.0,523.0,17.8,0.0,82.1,True
+Escherichia coli,Cefepime,2008.0,2024.0,17.0,2008.0,2024.0,97448.0,5702.0,669.0,65.2,12.5,22.4,True
+Escherichia coli,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,41257.0,5702.0,324.0,3.0,2.4,94.6,False
+Escherichia coli,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,66452.0,5218.0,527.0,1.5,29.0,69.6,True
+Escherichia coli,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,82771.0,6371.0,559.0,14.7,4.5,80.9,True
+Escherichia coli,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,66452.0,5218.0,527.0,6.6,1.3,92.2,True
+Escherichia coli,Ceftolozane tazobactam,2014.0,2024.0,6.0,2017.0,2024.0,34453.0,5762.0,268.0,0.3,3.5,96.2,False
+Escherichia coli,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,47922.0,2956.0,319.0,59.2,20.4,20.4,True
+Escherichia coli,Ciprofloxacin,2018.0,2024.0,7.0,2018.0,2024.0,41257.0,5701.0,324.0,44.2,35.6,20.2,False
+Escherichia coli,Colistin,2014.0,2024.0,11.0,2014.0,2024.0,58947.0,5441.0,459.0,32.5,0.1,67.4,True
+Escherichia coli,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,25194.0,4480.0,203.0,0.4,0.2,99.4,False
+Escherichia coli,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Escherichia coli,Gentamicin,2014.0,2024.0,7.0,2018.0,2024.0,41258.0,5702.0,324.0,0.5,16.6,82.9,False
+Escherichia coli,Imipenem,2012.0,2024.0,13.0,2012.0,2024.0,66452.0,5218.0,527.0,0.7,1.1,98.2,True
+Escherichia coli,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,104889.0,5441.0,739.0,24.5,26.6,48.9,True
+Escherichia coli,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,100335.0,5667.0,697.0,69.8,0.7,29.5,True
+Escherichia coli,Meropenem vaborbactam,2020.0,2024.0,5.0,2020.0,2024.0,29923.0,6084.0,237.0,94.7,1.7,3.6,False
+Escherichia coli,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,33977.0,2932.0,248.0,25.4,5.1,69.5,True
+Escherichia coli,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,100429.0,5667.0,697.0,1.1,4.6,94.4,True
+Escherichia coli,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,100429.0,5667.0,697.0,0.1,0.0,99.9,True
+Escherichia coli,Trimethoprim sulfa,2014.0,2024.0,7.0,2018.0,2024.0,41257.0,5702.0,324.0,54.3,40.4,5.3,False
+Haemophilus influenzae,Amikacin,2012.0,2024.0,6.0,2012.0,2017.0,7035.0,1156.0,55.0,3.7,0.0,96.3,False
+Haemophilus influenzae,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,23693.0,1262.0,224.0,24.7,0.0,75.3,True
+Haemophilus influenzae,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,23693.0,1262.0,224.0,60.1,11.2,28.7,True
+Haemophilus influenzae,Ampicillin sulbactam,2012.0,2017.0,6.0,2012.0,2017.0,2898.0,533.0,28.0,0.3,0.4,99.2,False
+Haemophilus influenzae,Aztreonam,2012.0,2024.0,3.0,2012.0,2014.0,832.0,311.0,1.0,46.5,0.1,53.4,False
+Haemophilus influenzae,Aztreonam avibactam,2012.0,2024.0,3.0,2012.0,2014.0,832.0,311.0,1.0,94.4,0.1,5.5,False
+Haemophilus influenzae,Cefepime,2008.0,2024.0,10.0,2008.0,2017.0,12874.0,1246.0,108.0,96.1,0.0,3.9,False
+Haemophilus influenzae,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,9351.0,705.0,92.0,76.5,0.1,23.4,True
+Haemophilus influenzae,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,16386.0,1146.0,150.0,47.1,0.1,52.7,True
+Haemophilus influenzae,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,9351.0,705.0,92.0,79.0,0.1,21.0,True
+Haemophilus influenzae,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,19350.0,1524.0,183.0,94.4,0.0,5.6,False
+Haemophilus influenzae,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,2898.0,533.0,28.0,1.2,0.1,98.7,False
+Haemophilus influenzae,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Haemophilus influenzae,Imipenem,2012.0,2024.0,6.0,2012.0,2017.0,2898.0,533.0,28.0,1.9,0.0,98.1,False
+Haemophilus influenzae,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,25803.0,1175.0,247.0,16.1,0.6,83.3,True
+Haemophilus influenzae,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,23645.0,1262.0,224.0,42.1,0.0,57.8,True
+Haemophilus influenzae,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,17238.0,1627.0,159.0,57.8,0.1,42.1,True
+Haemophilus influenzae,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,23693.0,1262.0,224.0,88.5,0.1,11.4,False
+Haemophilus influenzae,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,23693.0,1262.0,224.0,2.1,0.1,97.8,True
+Klebsiella oxytoca,Amikacin,2012.0,2024.0,13.0,2012.0,2024.0,12595.0,860.0,120.0,0.8,0.4,98.8,True
+Klebsiella oxytoca,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,15940.0,835.0,150.0,12.1,5.7,82.2,True
+Klebsiella oxytoca,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,15931.0,835.0,150.0,0.2,70.9,28.9,True
+Klebsiella oxytoca,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Klebsiella oxytoca,Aztreonam,2012.0,2024.0,13.0,2012.0,2024.0,9632.0,736.0,86.0,7.0,2.8,90.2,True
+Klebsiella oxytoca,Aztreonam avibactam,2012.0,2024.0,13.0,2012.0,2024.0,9504.0,735.0,85.0,15.8,0.0,84.2,True
+Klebsiella oxytoca,Cefepime,2008.0,2024.0,17.0,2008.0,2024.0,15339.0,842.0,143.0,81.6,1.6,16.7,True
+Klebsiella oxytoca,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,5524.0,805.0,53.0,0.2,8.1,91.7,False
+Klebsiella oxytoca,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,9632.0,736.0,86.0,0.8,12.8,86.4,True
+Klebsiella oxytoca,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,12594.0,860.0,120.0,21.8,2.0,76.2,True
+Klebsiella oxytoca,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,9632.0,736.0,86.0,2.4,0.8,96.7,True
+Klebsiella oxytoca,Ceftolozane tazobactam,2014.0,2024.0,6.0,2017.0,2024.0,4743.0,797.0,43.0,0.2,1.9,97.9,False
+Klebsiella oxytoca,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,8701.0,589.0,83.0,57.6,6.0,36.5,True
+Klebsiella oxytoca,Ciprofloxacin,2018.0,2024.0,7.0,2018.0,2024.0,5524.0,805.0,53.0,88.0,2.4,9.5,False
+Klebsiella oxytoca,Colistin,2014.0,2024.0,11.0,2014.0,2024.0,8438.0,739.0,78.0,27.6,0.2,72.1,True
+Klebsiella oxytoca,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,4108.0,724.0,33.0,0.0,0.5,99.4,False
+Klebsiella oxytoca,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Klebsiella oxytoca,Gentamicin,2014.0,2024.0,7.0,2018.0,2024.0,5524.0,805.0,53.0,2.8,3.5,93.7,False
+Klebsiella oxytoca,Imipenem,2012.0,2024.0,13.0,2012.0,2024.0,9632.0,736.0,86.0,0.1,0.8,99.1,True
+Klebsiella oxytoca,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,16838.0,805.0,157.0,35.3,2.5,62.2,True
+Klebsiella oxytoca,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,15918.0,835.0,149.0,67.4,0.5,32.1,True
+Klebsiella oxytoca,Meropenem vaborbactam,2020.0,2024.0,5.0,2020.0,2024.0,4032.0,829.0,38.0,96.7,0.6,2.7,False
+Klebsiella oxytoca,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,6308.0,578.0,60.0,14.5,2.0,83.5,True
+Klebsiella oxytoca,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,15940.0,835.0,150.0,1.3,10.9,87.8,True
+Klebsiella oxytoca,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,15940.0,835.0,150.0,0.1,0.0,99.9,True
+Klebsiella oxytoca,Trimethoprim sulfa,2014.0,2024.0,7.0,2018.0,2024.0,5524.0,805.0,53.0,90.5,7.4,2.1,False
+Klebsiella pneumoniae,Amikacin,2012.0,2024.0,13.0,2012.0,2024.0,73059.0,5967.0,558.0,0.8,6.7,92.5,True
+Klebsiella pneumoniae,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,86784.0,5269.0,690.0,11.3,19.7,68.9,True
+Klebsiella pneumoniae,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,86770.0,5269.0,690.0,0.1,82.2,17.7,True
+Klebsiella pneumoniae,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Klebsiella pneumoniae,Aztreonam,2012.0,2024.0,13.0,2012.0,2024.0,60601.0,4310.0,528.0,8.1,19.1,72.8,True
+Klebsiella pneumoniae,Aztreonam avibactam,2012.0,2024.0,13.0,2012.0,2024.0,59695.0,4249.0,524.0,7.3,0.0,92.7,True
+Klebsiella pneumoniae,Cefepime,2008.0,2024.0,17.0,2008.0,2024.0,84435.0,5301.0,663.0,51.4,24.2,24.4,True
+Klebsiella pneumoniae,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,39287.0,5651.0,329.0,1.2,18.4,80.4,False
+Klebsiella pneumoniae,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,60601.0,4310.0,528.0,0.4,42.8,56.8,True
+Klebsiella pneumoniae,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,73049.0,5967.0,558.0,10.0,18.1,71.9,True
+Klebsiella pneumoniae,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,60601.0,4310.0,528.0,0.9,5.5,93.5,True
+Klebsiella pneumoniae,Ceftolozane tazobactam,2014.0,2024.0,6.0,2017.0,2024.0,33367.0,5724.0,272.0,0.1,21.2,78.7,False
+Klebsiella pneumoniae,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,38031.0,2249.0,301.0,46.9,31.7,21.4,True
+Klebsiella pneumoniae,Ciprofloxacin,2018.0,2024.0,7.0,2018.0,2024.0,39286.0,5651.0,329.0,44.2,31.9,23.9,False
+Klebsiella pneumoniae,Colistin,2014.0,2024.0,11.0,2014.0,2024.0,55567.0,5086.0,465.0,19.8,2.8,77.4,True
+Klebsiella pneumoniae,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,21314.0,3911.0,199.0,0.0,6.1,93.8,False
+Klebsiella pneumoniae,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Klebsiella pneumoniae,Gentamicin,2014.0,2024.0,7.0,2018.0,2024.0,39287.0,5651.0,329.0,5.4,27.0,67.7,False
+Klebsiella pneumoniae,Imipenem,2012.0,2024.0,13.0,2012.0,2024.0,60600.0,4310.0,528.0,0.2,11.2,88.6,True
+Klebsiella pneumoniae,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,90154.0,5086.0,727.0,21.3,22.8,55.9,True
+Klebsiella pneumoniae,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,86731.0,5269.0,690.0,55.7,9.5,34.8,True
+Klebsiella pneumoniae,Meropenem vaborbactam,2020.0,2024.0,5.0,2020.0,2024.0,29326.0,6148.0,240.0,77.3,10.0,12.7,False
+Klebsiella pneumoniae,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,26183.0,2285.0,234.0,3.7,10.6,85.7,True
+Klebsiella pneumoniae,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,86784.0,5269.0,690.0,0.4,21.6,78.0,True
+Klebsiella pneumoniae,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,86783.0,5269.0,690.0,0.1,0.1,99.9,True
+Klebsiella pneumoniae,Trimethoprim sulfa,2014.0,2024.0,7.0,2018.0,2024.0,39286.0,5651.0,329.0,51.1,41.3,7.5,False
+Pseudomonas aeruginosa,Amikacin,2012.0,2024.0,13.0,2012.0,2024.0,80334.0,5974.0,571.0,0.5,5.2,94.3,True
+Pseudomonas aeruginosa,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,90332.0,4962.0,670.0,0.1,97.1,2.9,False
+Pseudomonas aeruginosa,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,94096.0,5408.0,696.0,0.1,97.9,2.0,False
+Pseudomonas aeruginosa,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Pseudomonas aeruginosa,Aztreonam,2012.0,2024.0,13.0,2012.0,2024.0,67767.0,4845.0,541.0,0.0,3.4,96.6,True
+Pseudomonas aeruginosa,Aztreonam avibactam,2012.0,2024.0,13.0,2012.0,2024.0,66766.0,4578.0,536.0,0.1,0.6,99.4,True
+Pseudomonas aeruginosa,Cefepime,2008.0,2024.0,17.0,2008.0,2024.0,91731.0,5737.0,669.0,0.7,7.8,91.5,True
+Pseudomonas aeruginosa,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,48723.0,7655.0,349.0,0.0,8.0,92.0,False
+Pseudomonas aeruginosa,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,67767.0,4845.0,541.0,0.0,63.2,36.7,True
+Pseudomonas aeruginosa,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,80334.0,5974.0,571.0,3.4,6.7,89.9,True
+Pseudomonas aeruginosa,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,67767.0,4845.0,541.0,0.0,2.7,97.3,True
+Pseudomonas aeruginosa,Ceftolozane tazobactam,2014.0,2024.0,6.0,2017.0,2024.0,40031.0,7025.0,286.0,0.1,7.8,92.1,False
+Pseudomonas aeruginosa,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,38120.0,2277.0,292.0,0.1,56.2,43.7,True
+Pseudomonas aeruginosa,Ciprofloxacin,2018.0,2024.0,7.0,2018.0,2024.0,48721.0,7655.0,349.0,23.0,14.1,62.9,False
+Pseudomonas aeruginosa,Colistin,2014.0,2024.0,11.0,2014.0,2024.0,64469.0,5079.0,485.0,0.6,0.2,99.2,True
+Pseudomonas aeruginosa,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,19043.0,3760.0,192.0,0.0,13.6,86.3,False
+Pseudomonas aeruginosa,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Pseudomonas aeruginosa,Gentamicin,2014.0,2024.0,7.0,2018.0,2024.0,48723.0,7655.0,349.0,1.1,10.1,88.9,False
+Pseudomonas aeruginosa,Imipenem,2012.0,2024.0,13.0,2012.0,2024.0,67765.0,4845.0,541.0,0.1,22.2,77.7,True
+Pseudomonas aeruginosa,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,97536.0,4845.0,731.0,6.9,17.9,75.2,True
+Pseudomonas aeruginosa,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,94048.0,5408.0,696.0,3.4,10.4,86.2,True
+Pseudomonas aeruginosa,Meropenem vaborbactam,2020.0,2024.0,5.0,2020.0,2024.0,35989.0,8169.0,255.0,7.2,8.1,84.6,False
+Pseudomonas aeruginosa,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,26329.0,2279.0,226.0,0.4,46.6,53.0,True
+Pseudomonas aeruginosa,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,94096.0,5408.0,696.0,1.2,12.9,85.9,True
+Pseudomonas aeruginosa,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,94095.0,5408.0,696.0,0.0,30.2,69.8,True
+Pseudomonas aeruginosa,Trimethoprim sulfa,2014.0,2024.0,7.0,2018.0,2024.0,48723.0,7655.0,349.0,2.8,14.9,82.4,False
+Serratia marcescens,Amikacin,2012.0,2024.0,13.0,2012.0,2024.0,13403.0,983.0,116.0,0.6,1.2,98.3,True
+Serratia marcescens,Amoxycillin clavulanate,2007.0,2024.0,18.0,2007.0,2024.0,19607.0,1037.0,176.0,0.1,83.5,16.5,True
+Serratia marcescens,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,19591.0,1029.0,175.0,0.1,72.1,27.7,True
+Serratia marcescens,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Serratia marcescens,Aztreonam,2012.0,2024.0,13.0,2012.0,2024.0,7721.0,667.0,58.0,1.1,3.3,95.6,True
+Serratia marcescens,Aztreonam avibactam,2012.0,2024.0,13.0,2012.0,2024.0,7600.0,667.0,57.0,1.0,0.0,99.0,True
+Serratia marcescens,Cefepime,2008.0,2024.0,17.0,2008.0,2024.0,18528.0,995.0,164.0,79.5,3.8,16.7,True
+Serratia marcescens,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,6018.0,963.0,55.0,0.1,2.6,97.3,False
+Serratia marcescens,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,7721.0,667.0,58.0,0.1,11.7,88.3,True
+Serratia marcescens,Ceftazidime,2012.0,2024.0,13.0,2012.0,2024.0,13401.0,983.0,116.0,37.8,2.5,59.7,True
+Serratia marcescens,Ceftazidime avibactam,2012.0,2024.0,13.0,2012.0,2024.0,7721.0,667.0,58.0,0.2,1.3,98.4,True
+Serratia marcescens,Ceftolozane tazobactam,2014.0,2024.0,6.0,2017.0,2024.0,4348.0,714.0,37.0,0.0,3.9,96.0,False
+Serratia marcescens,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,14135.0,1014.0,134.0,8.7,5.9,85.5,True
+Serratia marcescens,Ciprofloxacin,2018.0,2024.0,7.0,2018.0,2024.0,6018.0,963.0,55.0,65.9,3.7,30.5,False
+Serratia marcescens,Colistin,2014.0,2024.0,11.0,2014.0,2024.0,7233.0,672.0,58.0,0.1,94.3,5.6,False
+Serratia marcescens,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,1703.0,302.0,3.0,0.1,1.1,98.9,False
+Serratia marcescens,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Serratia marcescens,Gentamicin,2014.0,2024.0,7.0,2018.0,2024.0,6018.0,963.0,55.0,0.8,5.5,93.7,False
+Serratia marcescens,Imipenem,2012.0,2024.0,13.0,2012.0,2024.0,7721.0,667.0,58.0,0.0,3.1,96.9,True
+Serratia marcescens,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,21218.0,983.0,195.0,23.3,2.3,74.4,True
+Serratia marcescens,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,19572.0,1020.0,176.0,58.8,1.1,40.1,True
+Serratia marcescens,Meropenem vaborbactam,2020.0,2024.0,5.0,2020.0,2024.0,4042.0,757.0,36.0,92.7,0.9,6.4,False
+Serratia marcescens,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,11886.0,1022.0,106.0,1.2,2.0,96.8,True
+Serratia marcescens,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,19607.0,1037.0,176.0,1.5,2.9,95.6,True
+Serratia marcescens,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,19607.0,1037.0,176.0,0.1,0.1,99.8,True
+Serratia marcescens,Trimethoprim sulfa,2014.0,2024.0,7.0,2018.0,2024.0,6018.0,963.0,55.0,89.0,5.0,6.0,False
+Staphylococcus aureus,Amoxycillin clavulanate,2007.0,2024.0,12.0,2007.0,2019.0,88279.0,7004.0,372.0,1.7,25.1,73.2,True
+Staphylococcus aureus,Ampicillin,2007.0,2024.0,18.0,2007.0,2024.0,141440.0,8270.0,738.0,11.6,48.7,39.7,True
+Staphylococcus aureus,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Staphylococcus aureus,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,108121.0,8719.0,574.0,0.2,0.0,99.8,True
+Staphylococcus aureus,Ceftazidime,2012.0,2024.0,7.0,2012.0,2019.0,54959.0,9143.0,208.0,0.0,42.8,57.2,False
+Staphylococcus aureus,Ceftazidime avibactam,2012.0,2024.0,7.0,2012.0,2019.0,54959.0,9143.0,208.0,0.0,42.7,57.3,False
+Staphylococcus aureus,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,92553.0,4204.0,413.0,0.1,29.7,70.2,True
+Staphylococcus aureus,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,54958.0,9233.0,208.0,0.1,21.4,78.5,False
+Staphylococcus aureus,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Staphylococcus aureus,Gentamicin,2014.0,2024.0,11.0,2014.0,2024.0,90374.0,8719.0,503.0,60.9,8.4,30.6,True
+Staphylococcus aureus,Imipenem,2012.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Staphylococcus aureus,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,145716.0,7369.0,779.0,1.6,21.1,77.3,True
+Staphylococcus aureus,Meropenem,2007.0,2024.0,12.0,2007.0,2019.0,88196.0,7004.0,371.0,19.1,15.9,65.1,True
+Staphylococcus aureus,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,88278.0,9494.0,372.0,74.6,2.5,23.0,True
+Staphylococcus aureus,Piperacillin tazobactam,2007.0,2024.0,12.0,2007.0,2019.0,88279.0,7004.0,372.0,4.3,26.8,68.9,True
+Staphylococcus aureus,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,141439.0,8269.0,738.0,0.1,0.0,99.8,True
+Staphylococcus aureus,Trimethoprim sulfa,2014.0,2024.0,11.0,2014.0,2024.0,90374.0,8719.0,503.0,41.8,1.8,56.5,True
+Streptococcus pneumoniae,Amoxycillin clavulanate,2007.0,2024.0,11.0,2007.0,2017.0,25994.0,2307.0,242.0,42.3,1.1,56.7,True
+Streptococcus pneumoniae,Ampicillin,2007.0,2024.0,11.0,2007.0,2017.0,13810.0,1170.0,120.0,67.5,0.1,32.4,True
+Streptococcus pneumoniae,Ampicillin sulbactam,2012.0,2017.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Streptococcus pneumoniae,Cefoperazone sulbactam,2018.0,2024.0,7.0,2018.0,2024.0,10905.0,1368.0,122.0,59.6,10.3,30.1,False
+Streptococcus pneumoniae,Ceftaroline,2012.0,2024.0,13.0,2012.0,2024.0,23086.0,1975.0,271.0,24.5,0.1,75.4,True
+Streptococcus pneumoniae,Ceftazidime,2012.0,2024.0,6.0,2012.0,2017.0,12181.0,2056.0,149.0,0.2,1.0,98.8,False
+Streptococcus pneumoniae,Ceftazidime avibactam,2012.0,2024.0,6.0,2012.0,2017.0,12181.0,2056.0,149.0,0.3,0.8,98.9,False
+Streptococcus pneumoniae,Ceftriaxone,2004.0,2017.0,14.0,2004.0,2017.0,28124.0,1636.0,266.0,48.5,0.7,50.8,True
+Streptococcus pneumoniae,Doripenem,2012.0,2017.0,6.0,2012.0,2017.0,12181.0,2056.0,149.0,60.9,0.2,38.9,False
+Streptococcus pneumoniae,Ertapenem,2023.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Streptococcus pneumoniae,Imipenem,2012.0,2024.0,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,False
+Streptococcus pneumoniae,Levofloxacin,2004.0,2024.0,21.0,2004.0,2024.0,39028.0,1631.0,388.0,1.1,0.7,98.2,True
+Streptococcus pneumoniae,Meropenem,2007.0,2024.0,18.0,2007.0,2024.0,36867.0,1725.0,364.0,54.6,1.3,44.1,True
+Streptococcus pneumoniae,Minocycline,2007.0,2017.0,11.0,2007.0,2017.0,25984.0,2307.0,242.0,21.9,15.8,62.3,True
+Streptococcus pneumoniae,Piperacillin tazobactam,2007.0,2024.0,18.0,2007.0,2024.0,24708.0,1265.0,242.0,71.0,3.0,26.0,True
+Streptococcus pneumoniae,Tigecycline,2007.0,2024.0,18.0,2007.0,2024.0,36900.0,1725.0,364.0,3.9,0.0,96.1,True

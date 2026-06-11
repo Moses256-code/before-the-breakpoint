@@ -1,0 +1,31 @@
+Drug,yrs,total_n,distinct_panels,min_idx_min,min_idx_max,max_idx_min,max_idx_max
+Tigecycline,21,845210.0,3,-7.0,-7.0,3.0,5.0
+Levofloxacin,21,826317.0,3,-8.0,-7.0,3.0,5.0
+Ampicillin,21,779991.0,2,-4.0,-2.0,4.0,5.0
+Piperacillin tazobactam,21,729240.0,3,-6.0,-4.0,6.0,7.0
+Meropenem,21,727241.0,3,-8.0,-4.0,4.0,4.0
+Amoxycillin clavulanate,21,706574.0,4,-6.0,-1.0,4.0,5.0
+Ceftazidime,21,552659.0,9,-6.0,3.0,5.0,7.0
+Ceftaroline,13,532512.0,2,-8.0,-8.0,4.0,7.0
+Amikacin,21,511397.0,2,-2.0,-1.0,6.0,6.0
+Cefepime,21,511396.0,2,-3.0,-1.0,5.0,5.0
+Ceftriaxone,21,455380.0,4,-8.0,-5.0,2.0,6.0
+Ceftazidime avibactam,13,417720.0,2,-6.0,-5.0,6.0,7.0
+Minocycline,14,392220.0,2,-6.0,-2.0,4.0,4.0
+Gentamicin,11,350019.0,3,-4.0,-3.0,4.0,5.0
+Trimethoprim sulfa,11,350017.0,2,-5.0,-2.0,2.0,5.0
+Imipenem,18,341829.0,3,-5.0,-4.0,3.0,4.0
+Ampicillin sulbactam,13,337463.0,4,-5.0,-2.0,3.0,6.0
+Aztreonam,13,313825.0,2,-6.0,-5.0,6.0,7.0
+Aztreonam avibactam,13,308721.0,2,-6.0,-6.0,6.0,7.0
+Colistin,11,287292.0,2,-4.0,-3.0,3.0,3.0
+Cefoperazone sulbactam,7,235349.0,1,-4.0,-4.0,6.0,6.0
+Ciprofloxacin,8,212916.0,3,-10.0,-3.0,0.0,2.0
+Doripenem,6,198382.0,1,-7.0,-7.0,3.0,3.0
+Ceftolozane tazobactam,6,173185.0,2,-6.0,-4.0,4.0,5.0
+Meropenem vaborbactam,5,154578.0,1,-4.0,-4.0,4.0,4.0
+Cefpodoxime,4,86100.0,1,-3.0,-3.0,4.0,4.0
+Ertapenem,2,57348.0,1,-9.0,-9.0,4.0,4.0
+Cefiderocol,1,25140.0,1,-5.0,-5.0,5.0,5.0
+Cefoxitin,20,8851.0,2,1.0,1.0,4.0,5.0
+Tetracycline,1,68.0,1,-2.0,-2.0,2.0,2.0

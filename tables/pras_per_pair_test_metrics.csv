@@ -1,0 +1,7 @@
+Species,Drug,n,positives,AUC,AUPRC
+Enterobacter cloacae,Meropenem,193,53,0.7256064690026954,0.5413446464389051
+Escherichia coli,Meropenem,223,4,0.8207762557077625,0.5240017746228927
+Klebsiella pneumoniae,Ceftazidime avibactam,129,47,0.8868707836014531,0.8291456358945173
+Klebsiella pneumoniae,Imipenem,129,82,0.899584846912299,0.9493737839735429
+Klebsiella pneumoniae,Meropenem,220,126,0.8794326241134752,0.9158811370007599
+Pseudomonas aeruginosa,Ceftazidime avibactam,130,78,0.845414201183432,0.903695701111364

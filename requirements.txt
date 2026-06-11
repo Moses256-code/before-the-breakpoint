@@ -1,0 +1,27 @@
+# Before the Breakpoint — Python dependencies
+# Tested with Python 3.12 on Ubuntu 24.04
+#
+# Install:  pip install -r requirements.txt
+# Heavier deps (pymc, arviz) only needed for the Bayesian PRAS script.
+
+# Core scientific computing
+numpy>=2.0
+pandas>=2.0
+scipy>=1.10
+pyarrow>=15.0
+
+# Statistical modeling
+scikit-learn>=1.4
+statsmodels>=0.14
+lifelines>=0.30      # interval-censored survival regression (validation cross-check)
+
+# Bayesian
+pymc>=5.0            # used in scripts/16_bayes_pras.py
+arviz>=0.20
+
+# Plotting
+matplotlib>=3.8
+seaborn>=0.13
+
+# I/O
+xlrd>=2.0            # only needed for re-reading the truncated ATLAS .xls (deprecated path)

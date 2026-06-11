@@ -1,0 +1,50 @@
+Species,Drug,Country,n_overlap,r_contemporaneous,r_pediatric_lead_1y
+Enterobacter cloacae,Meropenem,France,6,0.3873598271114312,-0.0641209044507988
+Enterobacter cloacae,Meropenem,Germany,11,0.7200329734512613,0.12480741036239751
+Enterobacter cloacae,Meropenem,Italy,8,-0.7301853911585181,-0.6243097190635066
+Enterobacter cloacae,Meropenem,Mexico,7,0.5061831085155731,0.45775037259921114
+Enterobacter cloacae,Meropenem,Spain,11,-0.026649042382709504,0.6899577409096536
+Escherichia coli,Meropenem,Belgium,5,0.9907748377770459,
+Escherichia coli,Meropenem,Brazil,5,-0.7690265426838783,
+Escherichia coli,Meropenem,Canada,8,0.5059689464964026,-0.2338715467651637
+Escherichia coli,Meropenem,China,7,0.5140699702513238,0.841781063574732
+Escherichia coli,Meropenem,Colombia,7,0.7490784489089474,0.4410610385693405
+Escherichia coli,Meropenem,France,17,0.37446152025806423,0.23000982205887527
+Escherichia coli,Meropenem,Germany,13,0.054631477180312284,0.7119077528479792
+Escherichia coli,Meropenem,Italy,12,0.3434176672030554,-0.1749214242797237
+Escherichia coli,Meropenem,Kuwait,8,0.3744553045835077,0.7756393636786131
+Escherichia coli,Meropenem,Mexico,14,0.7187647810659848,0.23094260948273151
+Escherichia coli,Meropenem,Morocco,5,-0.010134094204667042,
+Escherichia coli,Meropenem,Nigeria,7,0.34691212096389695,-0.6554742545973218
+Escherichia coli,Meropenem,Poland,9,0.08209062569509216,0.04291286965721547
+Escherichia coli,Meropenem,Russia,7,-0.4139001367983505,-0.4364391540625991
+Escherichia coli,Meropenem,South Africa,5,0.6187556307449534,
+Escherichia coli,Meropenem,Spain,10,0.6004222549187992,0.18481631191953582
+Klebsiella pneumoniae,Ceftazidime avibactam,Kuwait,8,0.5014264797084291,0.9577724966829841
+Klebsiella pneumoniae,Ceftazidime avibactam,Mexico,9,0.08088637224948196,0.38248996701445076
+Klebsiella pneumoniae,Ceftazidime avibactam,Morocco,5,0.8879357218034208,
+Klebsiella pneumoniae,Ceftazidime avibactam,Nigeria,8,-0.3097819499049699,-0.24071684261077453
+Klebsiella pneumoniae,Ceftazidime avibactam,Poland,7,-0.5107121024119338,-0.672987538047229
+Klebsiella pneumoniae,Ceftazidime avibactam,Russia,6,0.49750952691079053,-0.16646836609445262
+Klebsiella pneumoniae,Ceftazidime avibactam,South Africa,6,0.9840635811450834,0.6393261669551902
+Klebsiella pneumoniae,Imipenem,Kuwait,8,0.5712742583601524,0.9491189189593899
+Klebsiella pneumoniae,Imipenem,Mexico,9,0.6646815637996036,0.07493365457113611
+Klebsiella pneumoniae,Imipenem,Morocco,5,-0.069241757872625,
+Klebsiella pneumoniae,Imipenem,Nigeria,8,0.5649012585414908,-0.47933921583406747
+Klebsiella pneumoniae,Imipenem,Poland,7,-0.13392945454569208,-0.1262693871210098
+Klebsiella pneumoniae,Imipenem,Russia,6,0.6898569921925443,0.17940155633527283
+Klebsiella pneumoniae,Imipenem,South Africa,6,0.9602750713045288,0.9554165005172977
+Klebsiella pneumoniae,Meropenem,Colombia,7,0.12719818843196215,0.4876215952182615
+Klebsiella pneumoniae,Meropenem,France,6,0.41960548659313573,-0.43321579390582715
+Klebsiella pneumoniae,Meropenem,Germany,9,0.42944878770999023,-0.6695020863548488
+Klebsiella pneumoniae,Meropenem,India,5,0.7573539807177564,
+Klebsiella pneumoniae,Meropenem,Israel,5,0.5297272514549557,
+Klebsiella pneumoniae,Meropenem,Italy,11,0.3822640956541609,0.16584313001754397
+Klebsiella pneumoniae,Meropenem,Kuwait,8,0.6519370711658807,0.6858497255476816
+Klebsiella pneumoniae,Meropenem,Mexico,14,0.5641888773787381,0.03066473234764227
+Klebsiella pneumoniae,Meropenem,Morocco,5,0.7757655570030514,
+Klebsiella pneumoniae,Meropenem,Nigeria,8,0.10070267430862857,-0.06359622155934679
+Klebsiella pneumoniae,Meropenem,Poland,8,0.19740029701381853,-0.42985555802159037
+Klebsiella pneumoniae,Meropenem,Russia,6,0.2808495424373463,0.009177147048724205
+Klebsiella pneumoniae,Meropenem,South Africa,8,0.9532494717377503,0.7239480511094619
+Klebsiella pneumoniae,Meropenem,Spain,11,0.19780217124063335,-0.0005757323342744918

@@ -1,0 +1,7 @@
+feature,coef_standardized,interpretation
+pct_above_ecoff,0.9299055355465456,Current %above-ECOFF (level)
+pct_above_bp,1.6427533574296653,Current %above-breakpoint (level)
+reservoir,-0.3708142085524729,Pre-resistance reservoir (ECOFF − BP)
+vel_ecoff_3y,-0.39636833965817775,3-year velocity of %above-ECOFF
+acc_ecoff,0.20362624542968807,Acceleration of %above-ECOFF
+intercept,-1.8644163743845228,Baseline log-odds
