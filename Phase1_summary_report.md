@@ -97,8 +97,3 @@ A. baumannii meropenem: 58.4 % right-censored (`>16`). This bug is mostly alread
 | `figures/qc02_panel_ranges.png` | Per-drug panel range trajectories (the critical QC figure). |
 | `figures/phase1_recommended_pairs.png` | Yearly volume for each recommended pair, showing in-window vs out-of-window data. |
 
----
-
-## Ready for Phase 2
-
-Phase 2 will fit interval-censored hierarchical models for each of the 17 pairs to estimate **annual log₂-MIC drift** with proper uncertainty, separating real signal from sparse-data noise via country-level partial pooling. The output will be a country-year matrix of estimated MIC distribution shifts, ready to feed the Pre-Resistance Alert Score in Phase 3.
