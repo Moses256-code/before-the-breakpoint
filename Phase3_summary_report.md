@@ -100,5 +100,5 @@ The negative coefficients on reservoir and velocity reflect collinearity with th
 | `tables/pras_bucket_realization.csv` | Risk-bucket → observed crossing rate |
 | `figures/phase3_pras_validation.png` | ROC + PR + calibration + score distribution |
 | `figures/phase3_pras_worked_example.png` | The 4-panel headline: trajectories + lead-time + bucket realization |
-| `reports/dashboard.html` | **Interactive dashboard with embedded data (807 KB)** |
-| `reports/Manuscript_outline.md` | Full 5-page report outline + revised 300-word EOI |
+
+
